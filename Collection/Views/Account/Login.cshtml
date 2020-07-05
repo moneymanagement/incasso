@@ -1,0 +1,79 @@
+﻿@model Collection.Web.Models.Account.LoginFormViewModel
+@{
+   // SetAntiForgeryCookie();
+}
+<nav class="black white-text">
+    <div class="nav-wrapper container">
+        <a href="?home" class="brand-logo"><img src="~/Images/logo-small.png" class="responsive-img" /></a>
+    </div>
+</nav>
+<div class="section container">
+    <div class="card-panel z-depth-0" style="background:transparent">
+        <div class="row">
+            <div class="col s12">
+                <form id="form_login"   method="POST" asp-action="Login">
+                    <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+                    <input type="hidden" name="returnUrlHash" />
+                    <div class="container section">
+                        <div class="row">
+                            <div class="col s12 center semibold">
+                               @L("LoginTitle") 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="user" name="UsernameOrEmailAddress" type="text" class="validate">
+                                <label for="user">@L("UserName")</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="password" name="Password" type="password" class="validate">
+                                <label for="password">@L("Password")</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <select class="icons" name="Language" id="language">
+                                    <option value="nl-NL" data-icon="/Images/nl.png" class="left circle">Nederlands</option>
+                                    <option value="en-US" data-icon="/Images/uk.jpg" class="left circle">English</option>
+
+
+
+
+                                </select>
+                                <label>@L("Language")</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 center">
+                            <a class="btn waves waves-light black" id="btn_submit"><i class="material-icons left">vpn_key</i> @L("LogIn")</a>
+                        </div>
+                    </div>
+                    @if (Model.IsSelfRegistrationAllowed)
+            {
+                        <div class="row m-t-15 m-b--20">
+                            <div class="col-xs-12">
+                                @*<a href="@Url.Action("Register", "Account")">@L("Register")</a>*@
+                            </div>
+                        </div>
+                    }
+                    <div class="row">
+                        <div class="col s12 center">
+                            <div class="preloader-wrapper big active" style="display:none;">
+                                <div class="spinner-layer spinner-green-only">
+                                    <div class="circle-clipper left">
+                                        <div class="circle"></div>
+                                    </div><div class="gap-patch">
+                                        <div class="circle"></div>
+                                    </div><div class="circle-clipper right">
+                                        <div class="circle"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

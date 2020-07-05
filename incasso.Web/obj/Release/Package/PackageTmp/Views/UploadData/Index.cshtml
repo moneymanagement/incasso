@@ -1,0 +1,111 @@
+﻿@using System.Web.Optimization
+@using Abp.Web.Mvc.Extensions
+@model Incasso.Upload.Dto.UploadViewModel
+@{
+    ViewBag.ActiveMenu = PageNames.UploadData;
+}
+@section styles {
+    <link href="~/lib/morris.js/morris.css" rel="stylesheet" />
+}
+@section scripts{
+    @Html.IncludeScript("~/Views/UploadData/Index.js")
+}
+<div class="section">
+    <div class="row">
+        <div class="col s12 l6">
+            <form id="form_debtors" enctype="multipart/form-data" method="post">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="center" id="dropzone">
+                            <span class="dz-message">
+                                <br /><br />
+                                @L("UploadMessage")
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col s12 l6">
+                        <label>@L("Administrations")</label><br />
+                        @foreach (var item in Model.Administrators.OrderBy(x=>x.Name))
+                        {
+                            <div class="left padding-05">
+                                <input type="checkbox" id="Admin@(item.Id)" name="admin[]" value="@(item.Id)" />
+                                <label for="Admin@(item.Id)">@(item.Name)</label>
+                            </div>
+                        }
+                    </div>
+                    <div class="col s12 l3">
+                        <label>@L("FileType") </label><br />
+                        <input name="FileType" type="radio" id="Type0" value="Outsourcing" CHECKED />
+                        <label for="Type0">@L("Outsourcing")</label><br />
+                        <input name="FileType" type="radio" id="Type1" value="Collection" />
+                        <label for="Type1">@L("Collection")</label>
+                    </div>
+                    <div class="col s12 l3">
+                        <label>@L("Override")</label>
+                        <div class="switch">
+                            <label>
+                                @L("No")
+                                <input type="checkbox" id="Override">
+                                <span class="lever"></span>
+                                @L("Yes")
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <button type="button" id="btn_submit" class="btn waves-effect waves-light"><i class="material-icons left">file_upload</i>@L("Upload")</button>
+                        <div class="preloader-wrapper small active right" style="margin-right:1rem;display:none;">
+                            <div class="spinner-layer spinner-green-only">
+                                <div class="circle-clipper left">
+                                    <div class="circle"></div>
+                                </div><div class="gap-patch">
+                                    <div class="circle"></div>
+                                </div><div class="circle-clipper right">
+                                    <div class="circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row success-container" style="display:none;">
+                    <div class="col s12 main-green white-text">
+                        <br />
+                        <i class="material-icons left">thumb_up</i>@L("SavedSuccessMessage")
+                        <br /><br />
+                    </div>
+                </div>
+                <div class="row error-container" style="display:none;">
+                    <div class="col s12 red white-text">
+                        <br />
+                        <i class="material-icons left">thumb_down</i>@L("Somethingwentwrong")
+                        <br /><br />
+                    </div>
+                </div>
+                <div class="row warning-container" style="display:none;">
+                    <div class="col s12 amber lighten-2">
+                        <br />
+                        <i class="material-icons left">warning</i>
+                        <span class="semibold warning-content-title" style="display:none;">@L("Thefollowingfilenumberswerereopened")</span><br />
+                        <div class="warning-content"></div>
+                        <span class="semibold warning-content2-title" style="display:none;"><br />@L("Thefollowingfilenumbersarenew")</span><br />
+                        <div class="warning-content2"></div>
+                        <span class="semibold warning-content3-title" style="display:none;"><br />@L("InActiveDebtorFile")</span><br />
+                        <div class="warning-content3"></div>
+                        <br /><br />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col s12 l6 white z-depth-1" id="datalist">
+            <div id="table-list">
+                @Html.Partial("~/Views/UploadData/_GetGrid.cshtml", Model)
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(function () { setlist({ target: "UploadData", MaxResultCount:@Model.PageSize,SkipCount:@Model.Uploads.Items.Count }); });
+</script>

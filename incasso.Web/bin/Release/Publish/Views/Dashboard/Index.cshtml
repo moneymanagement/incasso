@@ -1,0 +1,81 @@
+﻿@using Abp.Web.Mvc.Extensions
+@model  incasso.Dashboard.dto.DashboardDto
+@{
+    ViewBag.ActiveMenu = PageNames.Dashboard; //The menu item will be active for this page.
+}
+
+@section styles {
+    <link href="~/lib/morris.js/morris.css" rel="stylesheet" />
+}
+@section scripts
+{
+    @Html.IncludeScript("~/Views/Dashboard/Index.js")
+}
+<div class="row section container">
+    <div class="col s12 l12">
+        <div class="row links-container">
+            <div class="col s12 l3">
+                <a href="/Actions" style="display:block;">
+                    <div class="card-panel center green white-text hoverable">
+                        <i class="material-icons ">notifications</i><br>
+                        <span class="light">@L("Actions")</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col s12 l3">
+                <a href="/Users" style="display:block;">
+                    <div class="card-panel center green white-text hoverable">
+                        <i class="material-icons ">supervisor_account</i><br>
+                        <span class="light">@L("Users")</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col s12 l3">
+                <a href="/administrations" style="display:block;">
+                    <div class="card-panel center green white-text hoverable">
+                        <i class="material-icons ">account_balance</i><br>
+                        <span class="light truncate">@L("Administrations")</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col s12 l3">
+                <a href="/Debtors" style="display:block;">
+                    <div class="card-panel center red white-text hoverable">
+                        <i class="material-icons ">card_travel</i><br>
+                        <span class="light">@L("Debtors")</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col s12">
+                <a href="/UploadData" style="display:block;">
+                    <div class="card-panel center grey darken-4 white-text hoverable">
+                        <i class="material-icons ">cloud_upload</i><br>
+                        <span class="light">@L("UploadData")</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 l12">
+        <div class="card overview">
+            <div class="card-content">
+                <h3 class="center center-align">
+                    <span class="card-title">Overview</span>
+                </h3>
+                <p>
+                    View users: @(Model.NoOfViewUser)<br>
+                    Admins: @(Model.NoOfAdministrator)<br><br>
+                </p>
+                <p>Administrations: @Model.NoOfAdministrators<br><br></p>
+                <p>
+                    @L("LastestExcepFile") <br>
+                    <span class="bold">@Model.FileName</span><br>
+                    @L("WasLoadedon") @Model.UploadedDate<br>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

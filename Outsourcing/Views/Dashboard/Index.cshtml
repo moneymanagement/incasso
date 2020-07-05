@@ -1,0 +1,163 @@
+﻿@using Abp.Web.Mvc.Extensions
+@model  incasso.Dashboard.dto.CollectionDashboardDto
+@{
+    ViewBag.ActiveMenu = PageNames.Dashboard; //The menu item will be active for this page.
+}
+
+@section styles {
+    <link href="~/lib/morris.js/morris.css" rel="stylesheet" />
+}
+@section scripts
+{
+    @Html.IncludeScript("~/Views/Dashboard/Index.js")
+}
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-4cccOnU0_NJ3x2I2b3YyIk0m30KYD3Y"></script>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+    console.log('@Url.Action("Dashbaord", "Download")');
+</script>
+<div class="row section maincontent">
+    <div class="col s12 l5 side-nav" id="debtorlist">
+        @Html.Partial("~/Views/Shared/_DebtorList.cshtml", Model)
+
+    </div>
+    <div class="col s12">
+        <div class="row">
+            <div class="col s12">
+                <div class="left">
+                    <a href="#!" data-activates="debtorlist" id="btn_debtorlist" class="button-collapse btn main-green waves-effect waves-light btn-large left"><i class="material-icons left">person</i> @L("Pickadebtor")</a>
+                </div>
+                <div id="graph_info" class="left" style="display:none;width:70%;">
+                </div>
+                <div class="row container no-data-placeholder">
+                    <div class="col s12">
+                        <ul class="collection with-header">
+                            <li class="collection-header"><h5>@L("StepMessage")</h5></li>
+                            <li class="collection-item valign-wrapper" style="overflow:hidden;">
+                                <div class="col s12 l1 center">
+                                    <i class="material-icons medium main-green-text">looks_one</i>
+                                </div>
+                                <div class="col s12 l11">
+                                    @L("Step1Message1")<br /><br />
+                                    <a href="#!" class="btn main-green waves-effect waves-light btn-stepbystep"><i class="material-icons left">person</i> @L("Pickadebtor")</a>
+                                    <br /><br />
+                                    @L("Step1Message2")
+                                </div>
+                            </li>
+                            <li class="collection-item valign-wrapper" style="overflow:hidden;">
+                                <div class="col s12 l1 center">
+                                    <i class="material-icons medium main-green-text">looks_two</i>
+                                </div>
+                                <div class="col s12 l11">
+                                    @L("Step2Message1")
+                                    <br />
+                                    @L("Step2Message2")
+                                </div>
+                            </li>
+                            <li class="collection-item valign-wrapper" style="overflow:hidden;">
+                                <div class="col s12 l1 center">
+                                    <i class="material-icons medium main-green-text">looks_3</i>
+                                </div>
+                                <div class="col s12 l11">
+                                    @L("Step3Message")
+
+                                </div>
+                            </li>
+                            <li class="collection-item valign-wrapper" style="overflow:hidden;">
+                                <div class="col s12 l1 center">
+                                    <i class="material-icons medium main-green-text">looks_4</i>
+                                </div>
+                                <div class="col s12 l11">
+                                    @L("Step4Message")
+                                    <br /><br />
+                                    <a href="#paid" class="btn red waves-effect waves-light btn-stepbystep"><i class="material-icons left">person</i> @L("DebtorsClosed")</a>
+                                </div>
+                            </li>
+                            <li class="collection-item valign-wrapper" style="overflow:hidden;">
+                                <div class="col s12 l1 center">
+                                    <i class="material-icons medium main-green-text">looks_5</i>
+                                </div>
+                                <div class="col s12 l11">
+                                    @L("Step5Message")
+                                    <a href="mailto:beheer@mmincasso.nl">beheer@mmincasso.nl</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="collapsible z-depth-0 main-info white" data-collapsible="expandable" style="display:none;">
+            <li>
+                <div class="collapsible-header center">
+                    <div style="display:inline-block;">
+                     
+                        <i class="material-icons">account_balance</i><span class="bold uppercase">@L("CompanyInformation")   </span>
+                    </div>
+                </div>
+                <div class="collapsible-body white">
+                    <div class="container" id="admin_info"></div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header center">
+                    <div style="display:inline-block;">
+                        <i class="material-icons">person</i><span class="bold uppercase">@L("DebtorDetails")</span>
+                    </div>
+                </div>
+                <div class="collapsible-body white">
+                    <div class="container" id="debtor_info"></div>
+                </div>
+            </li>
+            @*<?php if ($_SESSION["collection"]["role"]=="1" || $_SESSION["collection"]["role"]=="3") { ?>*@
+            @*<li>
+                <div class="collapsible-header center">
+                    <div style="display:inline-block;">
+                        <i class="material-icons">description</i><span class="bold uppercase">@L("AddInvoiceNote")</span>
+                    </div>
+                </div>
+                <div class="collapsible-body white" id="invoice_note_add_or_update">
+                    <form>
+                        <div class="row">
+                            <div class="col l6 offset-l3">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <input require type="text" class="datepicker" data-value= ="<?php echo date(" Y-m-d")"  name="note_date_add" id="note_date_add"/>
+                                    </div>
+                                    <div class="col s12">
+                                        <input require type="text" value="" name="note_text_add" id="note_text_add" />
+                                    </div>
+                                    <div class="col l12">
+                                        <a class="note_add_refresh x btn right"><i class="material-icons">refresh</i></a>
+                                        <a class="note_add x  btn right"><i class="material-icons">save</i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                    </form>
+                </div>
+            </li>*@
+            @*<?php } ?>*@
+            <li>
+                <div class="collapsible-header center">
+                    <div style="display:inline-block;">
+                        <i class="material-icons">description</i><span class="bold uppercase">@L("OUTSTANDINGINVOICES")</span>
+                    </div>
+                </div>
+                <div class="collapsible-body white" id="invoice_info"></div>
+            </li>
+            <li>
+                <div class="collapsible-header center">
+                    <div style="display:inline-block;">
+                        <i class="material-icons">receipt</i><span class="bold uppercase">@L("ClosedInvoices")</span>
+                    </div>
+                </div>
+                <div class="collapsible-body white" id="closed_info"></div>
+            </li>
+            </ul>
+    </div>
+</div>
+<div id="dummybox"></div>
+<script>
+  
+</script>

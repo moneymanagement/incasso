@@ -1,0 +1,164 @@
+﻿
+@using System.Web.Optimization
+@using Abp.Web.Mvc.Extensions
+
+@model Incasso.MultiTenancy.Dto.InvoiceViewModel
+@{
+    ViewBag.ActiveMenu = PageNames.Actions;
+}
+@section styles {
+    <link href="~/lib/morris.js/morris.css" rel="stylesheet" />
+}
+@section scripts{
+    @Html.IncludeScript("~/Views/Actions/Index.js")
+
+
+}
+
+<div class="section">
+    <div class="row">
+        <div class="col s12 l6">
+            <form id="form_actions" enctype="multipart/form-data" method="post">
+                <div class="row">
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="DebtorNumber" id="DebtorNumber">
+                        <label for="DebtorNumber">Debtor No</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="FileName" id="FileName">
+                        <label for="FileName">File Name</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="DossierNo" id="DossierNo">
+                        <label for="DossierNo">Dossier No</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="InvoiceNo" id="InvoiceNo" class="validate">
+                        <label for="InvoiceNo">Invoice No</label>
+                    </div>
+                    <div class="input-field col s12 l12">
+                        <input type="text" name="Action" id="Action">
+                        <label for="Action">Action</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="ActionDate" id="ActionDate" class="validate">
+                        <label for="ActionDate">Action Date</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="InvoiceDate" id="InvoiceDate" class="validate">
+                        <label for="InvoiceDate">Invoice Date</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="ExpiredDate" id="ExpiredDate" class="">
+                        <label for="ExpiredDate">Expiration Date</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="PaymentDate" id="PaymentDate" class="validate ">
+                        <label for="PaymentDate">Payment Date</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Amount" id="Amount" class="validate">
+                        <label for="Amount">Amount</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Open" id="Open" class="validate">
+                        <label for="Open">Open</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Paid" id="Paid" class="validate">
+                        <label for="Paid">Paid</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Paidmm" id="Paidmm" class="validate">
+                        <label for="Paidmm">Paid MM</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="PaidClient" id="PaidClient" class="validate">
+                        <label for="PaidClient">Paid Client</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Interest" id="Interest" class="validate">
+                        <label for="inInterestterest">Interest</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="CollectionFee" id="CollectionFee" class="validate">
+                        <label for="CollectionFee">Collection Fee</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="AdminCosts" id="AdminCosts" class="validate">
+                        <label for="AdminCosts">Admin Costs</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <div class="select-wrapper validate">
+                            <select id="Type" name="Type" class="validate initialized">
+                                <option value="" disabled="" selected="">Choose a type</option>
+                                <option value="Outsourcing">Outsourcing</option>
+                                <option value="Collection">Collection</option>
+                            </select>
+                        </div>
+                        <label for="type">Invoice Type</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <div class="select-wrapper validate">
+                            <select id="Status" name="Status" class="validate initialized">
+                                <option value="" disabled="" selected="">Choose a status</option>
+                                @foreach (var status in Model.StatusCatalog)
+                                {
+                                    <option value="@status.Id">@status.Catalog</option>
+                                }
+                            </select>
+                        </div>
+                        <label for="status">Status</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <div class="select-wrapper validate">
+                            <select id="Closed" name="Closed" class="validate initialized">
+                                <option value="" disabled="" selected="">Choose</option>
+                                <option value="false">No</option>
+                                <option value="true">Yes</option>
+                            </select>
+                        </div>
+                        <label for="closed">Closed</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <button type="button" id="btn_submit" class="btn waves-effect waves-light"><i class="material-icons left">save</i>Save</button>
+                        <input type="hidden" name="edit" id="edit">
+                        <div class="preloader-wrapper small active right" style="margin-right:1rem;display:none;">
+                            <div class="spinner-layer spinner-green-only">
+                                <div class="circle-clipper left">
+                                    <div class="circle"></div>
+                                </div><div class="gap-patch">
+                                    <div class="circle"></div>
+                                </div><div class="circle-clipper right">
+                                    <div class="circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row success-container" style="display:none;">
+                    <div class="col s12 main-green white-text">
+                        <br>
+                        <i class="material-icons left">thumb_up</i>Data was saved successfully!						<br><br>
+                    </div>
+                </div>
+                <div class="row error-container" style="display:none;">
+                    <div class="col s12 red white-text">
+                        <br>
+                        <i class="material-icons left">thumb_down</i>Something went wrong!						<br><br>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col s12 l6 white z-depth-1" id="datalist">
+            <div id="table-list">
+                @Html.Partial("~/Views/Actions/_GetGrid.cshtml", Model)
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () { setlist({ target: "Actions", MaxResultCount:@Model.PageSize,SkipCount:@Model.Invoices.Items.Count }); });
+</script>

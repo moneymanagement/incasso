@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="en">
+  <texts>
+    <text name="PendingDebtors" value="PENDING DEBTOR"/>
+    <text name="DebtorsClosed" value="DEBTOR CLOSED"/>
+    <text name="PaidAmt" value="Paid amt."/>
+    <text name="Outstanding" value="Outstanding"/>
+    <text name="Country" value="Country"/>
+    <text name="Dispute" value="Dispute"/>
+    <text name ="Admincost" value="Admin Cost" />
+    <text name ="Admcosts" value=" Adm. costs" />
+    <text name ="Openamt" value=" Open amt." />
+    <text name ="Excel" value="Excel" />
+    <text name ="OUTSTANDINGINVOICES" value="Outstanding Invoices" />
+   
+    <text name="PayDate" value="PayDate"/>
+    <text name="AdministratorNumberalreadyexists" value="Administrator Number already exists"/>
+    <text name="DebiteurNumberalreadyexists" value="Debtor Number already exists"/>
+
+    <text name="WasLoadedon" value="was loaded on"/>
+    <text name="LastestExcepFile" value="Latest Excel file:"/>
+    <text name="Administrator" value="Administrator"/>
+    <text name="Override" value="Override"/>
+    <text name="Search" value="Search term..."/> 
+    <text name="Role" value="Role"/>
+    <text name="Outsourcing" value="Outsourcing"/>
+    <text name="Collection" value="Collection"/>
+    <text name="ChooseARole" value="Choose a user role"/>
+    <text name="Administrations" value="Administrations" />
+    <text name="Dashboard" value="Dashboard" />
+    <text name="Debtors" value="Debtors" />
+    <text name="Action" value="Action" />
+    <text name="UploadData" value="Upload Data" />
+    <text name="Actions" value="Actions" />
+    <text name="Upload" value="Upload" />
+    <text name="Users" value="Users" />
+    <text name="AdministrationNummer" value="Administration Number" />
+    <text name="DebtorNumber" value="Debtor Number" />
+    <text name="OverWrite" value="Over Write" />
+    <text name="UserDeleteOptionMessage" value="Are you sure you want to continue?" />
+    <text name="FileType" value="File Type"/>
+    <text name="Date" value="Date"/>
+    <text name="File" value="File"/>
+    <Text name="Type" value="Type"/>
+    <Text name="ActionDate" value="Action Date"/>
+    <text name="Debtor" value="Debtor" />
+    <text name="SavedSuccessMessage" value="Data was saved successfully!"/>
+    <text name="Somethingwentwrong" value="Something went wrong!"/>
+    <text name="Thefollowingfilenumberswerereopened"  value="The following file numbers were reopened:"/>
+    <text name="UploadMessage" value="Drag an Excel file to this field to load (or click)"/>
+    <text name="Thefollowingfilenumbersarenew" value="The following file numbers are new:"/>
+    <text name="InActiveDebtorFile" value="The following file numbers belong to an inactive debtor:"/>
+    <text name="HomePage" value="Home page" />
+    <text name="About" value="About" />
+    <text name="WellcomeMessage" value="Welcome to incasso!" />
+    <text name="LoginTitle" value="Log in to your administration panel"/>
+    <text name="FormIsNotValidMessage" value="Form is not valid. Please check and fix errors." />
+    <text name="TenantNameCanNotBeEmpty" value="Tenant name can not be empty" />
+    <text name="Language" value="Language"/>
+    <text name="ContactUsMessage" value="Any questions? Feel free to send us an e-mail at"/>
+
+    <text name="StepMessage" value="Step by step instructions" />
+    <text name="Step1Message1" value="Choose a debtor from the list on the left side of your of the screen by clicking on the following button"/>
+    <text name="Step1Message2" value="You can also use the search bar on the top right of the screen to search for a debtor by name, number, invoice number, invoice amount, postal code, or location."/>
+    <text name="Step2Message1" value="After clicking on the debtor of your choice, all of the debtor's data will load."/>
+    <text name="Step2Message2" value="You may close or expand any of the sections where the given data is grouped. You can also download lists of open and/or closed invoices including the notes."/>
+    <text name="Step3Message" value="If you want to load another debtor, click on the button again and choose the debtor of your choice."/>
+    <text name="Step4Message" value="If you wish to see a list of paid debtors, click on the button below."/>
+    <text name="Step5Message" value="If you have any further questions or need help, please send an email at"/>
+    <text name="NoNotesToDisplay" value="There are no notes for this invoice" />
+    <text name="NoInvoiceToDisplay" value="There are no invoice to display" />
+    
+
+    <text name="Overviewoutstandinginvoices" value="Overview outstanding invoices" />
+    <text name="Pickadebtor" value="Pick a debtor" />
+
+    <text name="Invoice" value="Invoice" />
+    <text name="Paidbeforesubmission" value="Paid Before Submission" />
+    <text name="Interest" value="Interest" />
+    <text name="PAID" value="Paid" />
+    <text name="OPEN" value="OPEN" />
+    <text name="AdministrationCosts" value="Administration Costs" />
+    <text name="CollectionCharges" value="Collection Charges" />
+    <text name="TotalOutstanding" value="Total Outstanding" />
+    <text name="Number" value="Number" />
+    <text name="Bank" value="Bank" />
+    <text name="Bankrekening" value="Account nr." />
+    <text name="Contactperson" value="Contact person" />
+    <text name="IBAN" value="IBAN" />
+    <text name="Telefoonnummer" value="Phone number" />
+    <text name="Mobile" value="Mobile" />
+    <text name="BIC" value="BIC" />
+    <text name="Email" value="E-mail" />
+
+    <text name="NotesMM" value="Notities MM" />
+    <text name="Notes" value="Notities" />
+    <text name="Status" value="Status" />
+    <text name="Address" value="Address" />
+    <text name="Postcode" value="Postcode" />
+    <text name="City" value="City" />
+    <text name="FileNumber" value="File Number" />
+
+
+    <text name="CompanyInformation" value="Company Information" />
+    <text name="DebtorDetails" value="Debtor Details" />
+    <text name="AddInvoiceNote" value="ADD INVOICE NOTE" />
+    <text name="MainOverview" value="Main Overview" />
+    <text name="ClosedInvoices" value="Closed Invoices" />
+
+
+    <text name="Invoicenr" value="Invoice nr." />
+    <text name="Exp" value="Exp." />
+    <text name="Expired" value="Expired" />
+    <text name="DueDate" value="Due Date" />
+    <text name="InvoiceAmount" value="Invoice amt." />
+    <text name="PaidMM" value="Paid MM" />
+    <text name="PaidClient" value="Paid Client" />
+    <text name="TotalOpen" value="Total Open  (incl. I&#38;C)" />
+    <text name="ClickToSeeNotes" value="Click on an invoice to see its notes" />
+
+    <text name="PaymentDate" value="Payment Date" />
+    <text name="TotalPayment" value="Total Payment  " />
+
+    <text name="ExcelAmount" value="Amount" />
+    <text name="ExcelPaidAmount" value="Paid Amount" />
+    <text name="ExcelInvoiceNumber" value="Invoice #" />
+    <text name="ExcelExpired" value="Expired" />
+    <text name="ExcelAdministrationCosts" value="Administration Costs" />
+    <text name="ExcelOpenAmount" value="Open Amount" />
+    <text name="ExcelCollectionCharges" value="Collection Costs" />
+
+
+
+    
+
+
+
+
+    <text name="InvalidUserNameOrPassword" value="Invalid user name or password" />
+    <text name="ThereIsNoTenantDefinedWithName{0}" value="There is no tenant defined with name {0}" />
+    <text name="TenantIsNotActive" value="Tenant {0} is not active." />
+    <text name="UserIsNotActiveAndCanNotLogin" value="User {0} is not active and can not log in." />
+    <text name="UserEmailIsNotConfirmedAndCanNotLogin">Your email address is not confirmed. You can not login</text>
+    <text name="UserLockedOutMessage">The user account has been locked out. Please try again later.</text>
+    <text name="PleaseEnterLoginInformation" value="Please enter login information" />
+    <text name="TenancyName" value="Tenancy name" />
+    <text name="UserNameOrEmail" value="User name or email" />
+    <text name="Password" value="Password" />
+    <text name="RememberMe" value="Remember me" />
+    <text name="LogIn" value="LOG IN" />
+
+    <text name="LoginFailed" value="Login failed!" />
+
+    <text name="NameSurname" value="Name surname" />
+    <text name="UserName" value="User name" />
+    <text name="Name" value="Name" />
+    <text name="Surname" value="Surname" />
+    <text name="EmailAddress" value="Email address" />
+
+    <text name="Tenants" value="Tenants" />
+    <text name="SavedSuccessfully" value="Saved successfully" />
+    <text name="CreateNewTenant" value="Create new tenant" />
+    <text name="AdminEmailAddress" value="Admin email address" />
+    <text name="Save" value="Save" />
+    <text name="Cancel" value="Cancel" />
+    <text name="TenantName_Regex_Description" value="Tenant name must be at least 2 chars, starts with a letter and continue with letter, number, dash or underscore." />
+    <text name="DefaultPasswordIs" value="Default password is {0}" />
+    <text name="CanBeEmptyToLoginAsHost" value="Can be empty to login as host." />
+    <text name="Register" value="Register" />
+    <text name="OrLoginWith" value="Or login with" />
+    <text name="WaitingForActivationMessage" value="Your account is waiting to be activated by system admin." />
+    <text name="TenantSelection" value="Tenant Selection" />
+    <text name="TenantSelection_Detail" value="Please select one of the following tenants." />
+    <text name="Logout" value="Logout" />
+
+    <text name="RegisterFormUserNameInvalidMessage">Please dont enter an email address for username.</text>
+
+    <text name="DatabaseConnectionString" value="Database connection string" />
+    <text name="IsActive" value="Is active" />
+    <text name="FullName" value="Full name" />
+    <text name="CreateNewUser" value="Create new user" />
+    <text name="Yes" value="Yes" />
+    <text name="No" value="No" />
+    <text name="Optional" value="Optional" />
+    <text name="LeaveEmptyToSwitchToHost">Leave empty to switch to the host</text>
+
+    <text name="CurrentTenant">Current tenant</text>
+    <text name="NotSelected">Not selected</text>
+    <text name="Change">Change</text>
+    <text name="ChangeTenant">Change tenant</text>
+
+    <text name="MultiLevelMenu">Multi Level Menu</text>
+    <text name="Back">Back</text>
+    <text name="SuccessfullyRegistered">Successfully registered</text>
+    <text name="WaitingForEmailActivation">Your email address should be activated</text>
+    <text name="Roles">Roles</text>
+
+    <text name="RoleName">Role Name</text>
+    <text name="DisplayName">Display Name</text>
+    <text name="CreateNewRole">Create New Role</text>
+    <text name="EditRole">Edit Role</text>
+    <text name="EditUser">Edit User</text>
+    <text name="Edit">Edit</text>
+    <text name="Delete">Delete</text>
+
+
+  </texts>
+</localizationDictionary>

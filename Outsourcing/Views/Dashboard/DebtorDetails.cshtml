@@ -1,0 +1,90 @@
+﻿@model Incasso.MultiTenancy.Dto.DebtorDto
+@{
+    Layout = null;
+}
+<div class="row UPPER">
+    <div class="col s12 l6">
+        <div class="row">
+            <div class="col s12">
+                <i class="material-icons left">label</i><span class="semibold">@L("Number"):</span>
+                @Model.Number
+            </div>
+            <div class="col s12">
+                <i class="material-icons left">person</i><span class="semibold">@L("Name"):</span>
+                @Model.Name
+            </div>
+            <div class="col s12">
+                <i class="material-icons left">person_pin</i><span class="semibold">@L("Contactperson"):</span>
+                @Model.Contact
+            </div>
+            <div class="col s12">
+                <i class="material-icons left">phone</i><span class="semibold">@L("Telefoonnummer"):</span>
+                @Model.Phone
+            </div>
+            <div class="col s12">
+                <i class="material-icons left">phone_iphone</i><span class="semibold">@L("Mobile"):</span>
+                @Model.Mobile
+            </div>
+            <div class="col s12">
+                <i class="material-icons left">email</i><span class="semibold">@L("Email"):</span>
+                @Model.Email
+            </div>
+            <div class="col s12">
+                <i class="material-icons left">note</i><span class="semibold">@L("NotesMM"):</span>
+                @Model.Notes_mm
+            </div>
+        </div>
+    </div>
+    <div class="col s12 l6">
+        <div class="row">
+            <div class="col s12">
+                <i class="material-icons left">work</i><span class="semibold">@L("Status"):</span>
+                @(Model.Status==0?"Active":"Inactive")
+            </div>
+            <div class="col s12">
+                <i class="material-icons left">location_on</i><span class="semibold">@L("Address"):</span>
+                @Model.Address
+            </div>
+            <div class="col s12">
+                <i class="material-icons left">markunread_mailbox</i><span class="semibold">@L("Postcode"):</span>
+                @Model.Postal
+            </div>
+            <div class="col s12">
+                <i class="material-icons left">location_city</i><span class="semibold">@L("City"):</span>
+                @Model.City
+            </div>
+            <div class="col s12">
+                <i class="material-icons left">location_city</i><span class="semibold">@L("Country"):</span>
+                @Model.Country
+            </div>
+            <div class="col s12">
+                <div class="row no-margin no-padding">
+                    <div class="col input-field s10 no-padding">
+                        <i class="material-icons prefix">note</i>
+                        <input type="text" name="notes" id="notes" value="@Model.Notes">
+                        <label for="notes">@L("Notes")</label>
+                    </div>
+                    <div class="col s2 input-field">
+                        <a class="btn btn-floating waves-effect waves-light" id="btn_notes_save"><i class="material-icons">save</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@if (!string.IsNullOrEmpty(Model.Address))
+{
+    <div class="row no-margin no-padding" id="map_canvas@(Model.Id)"></div>
+}
+<script>
+	var map_id="@Model.Id";
+	var map_name="@Model.Name";
+    var map_address = "@(Model.Address+". "+ Model.City +","+ Model.Country)";
+	var map_location="@(Model.City + "." +@Model.Country)";
+	$(function(){
+		$("#map_canvas"+map_id).css({height:"150px",width:"100%"});
+    init_map() 
+	});
+</script>	

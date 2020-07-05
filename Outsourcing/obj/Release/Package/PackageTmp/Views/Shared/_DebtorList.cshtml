@@ -1,0 +1,89 @@
+﻿@using Abp.Web.Mvc.Extensions
+@using incasso.Helper
+@model  incasso.Dashboard.dto.CollectionDashboardDto
+
+@{
+    Layout = null;
+}
+
+<div class="col input-field s12 right">
+    <i class="material-icons prefix">search</i>
+    <input id="search1" type="text" class="search" placeholder="@L("Search")" value="">
+</div>
+<ul class="tabs row" style="overflow:hidden;">
+    <li class="tab col s6"><a class="tab1 active" href="#pending_debtors">@L("PendingDebtors")</a></li>
+    <li class="tab col s6"><a class="tab2" href="#paid_debtors">@L("DebtorsClosed")</a></li>
+</ul>
+<div id="pending_debtors" class="col s12" style="">
+    <ul class="collapsible z-depth-0 debtlist" data-collapsible="accordion">
+        @foreach (var item in Model.DebtorList)
+        {
+            <li>
+                <div class="collapsible-header"><i class="material-icons">account_balance</i><span class="bold uppercase">@item.Key</span></div>
+                <div class="collapsible-body white">
+                    <table class="highlight striped bordered" id="debtlist-table">
+                        <thead>
+                            <tr>
+                                <th>@L("Debtor")</th>
+                                <th style=" min-width: 130px; ">@L("DebtorNumber")</th>
+                                <th style=" min-width: 80px; " class="right-align">@L("InvoiceAmount")</th>
+                                <th class="right-align">@L("Outstanding")</th>
+                                <th>@L("Country")</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var value in item.Value)
+                            {
+                            <tr id="@value.DebtorId" class="clickable openInvoice">
+                                <td>@value.Name</td>
+                                <td>@value.DebtorNumber</td>
+                                <td class="right-align">@value.Summary.Currency@value.Summary.TotalInvoiceAmmount.ToIncassoGridFormat()</td>
+                                <td class="right-align">@value.Summary.Currency@value.Summary.OutsourcingOutStanding.ToIncassoGridFormat()</td>
+                                <td>@value.Country</td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </li>
+
+        }
+    </ul>
+</div>
+<div id="paid_debtors" class="col s12" style="">
+    <ul class="collapsible z-depth-0 debtlist" data-collapsible="accordion">
+        @foreach (var item in Model.ClosedDebtorList)
+        {
+            <li>
+                <div class="collapsible-header"><i class="material-icons">account_balance</i><span class="bold uppercase">@item.Key</span></div>
+                <div class="collapsible-body white">
+                    <table class="highlight striped bordered" id="debtlist-table">
+                        <thead>
+                            <tr>
+                                <th>@L("Debtor")</th>
+                                <th style=" min-width: 130px; ">@L("DebtorNumber")</th>
+                                <th class="right-align">@L("Outstanding")</th>
+                                <th style=" min-width: 80px; " class="right-align">@L("PaidAmt")</th>
+                                <th>@L("Country")</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var value in item.Value)
+                            {
+                            <tr id="@value.DebtorId" class="clickable closeInvoice">
+                                <td>@value.Name</td>
+                                <td>@value.DebtorNumber</td>
+                                <td class="right-align">@value.Summary.Currency@value.Summary.OutsourcingOutStanding.ToIncassoGridFormat()</td>
+                                <td class="right-align">@value.Summary.Currency@value.Summary.TotalPaid.ToIncassoGridFormat()</td>
+                                <td>@value.Country</td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </li>
+
+        }
+    </ul>
+</div>
+<div class="col s12" style="height:100px !important;"></div>

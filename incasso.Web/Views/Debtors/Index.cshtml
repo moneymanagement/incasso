@@ -1,0 +1,131 @@
+﻿@using System.Web.Optimization
+@using Abp.Web.Mvc.Extensions
+
+@model Incasso.MultiTenancy.Dto.DebtorViewModel
+@{
+    ViewBag.ActiveMenu = PageNames.Debtors; //The menu item will be active for this page.
+}
+@section styles {
+    <link href="~/lib/morris.js/morris.css" rel="stylesheet" />
+}
+@section scripts{
+    @Scripts.Render("~/Bundles/home-index")
+@Html.IncludeScript("~/Views/Debtors/Index.js")
+
+}
+
+<div class="section">
+    <div class="row">
+        <div class="col s12 l6">
+            <form id="form_debtors" enctype="multipart/form-data" method="post">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <div class="select-wrapper">
+                            <select id="AdministratorId" name="AdministratorId" class="initialized">
+                                <option value="" disabled="" selected="">Choose an administration</option>
+                             @foreach (var item in Model.Administrators)
+                             {
+
+                                <option value="@item.Id">@item.Name</option>
+                             }
+
+
+                            </select>
+                        </div>
+                        <label>Administration</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Name" id="Name" class="validate">
+                        <label for="Name">Name</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Number" id="Number" class="validate">
+                        <label for="Number">Debtor number</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Contact" id="Contact" class="">
+                        <label for="Contact">Contact person</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Email" id="Email" class="">
+                        <label for="Email">E-mail</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Phone" id="Phone" class="">
+                        <label for="Phone">Phone number</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Phone2" id="Phone2" class="">
+                        <label for="Phone2">Mobile</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Address" id="Address" class="">
+                        <label for="Address">Address</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Postal" id="Postal" class="">
+                        <label for="Postal">Postal code</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="City" id="City" class="">
+                        <label for="City">City</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Country" id="Country" class="">
+                        <label for="Country">Country</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Notes" id="Notes" class="">
+                        <label for="Notes">Notes</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Notes_mm" id="Notes_mm" class="">
+                        <label for="Notes_mm">Notes MM</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <button type="button" id="btn_submit" class="btn waves-effect waves-light"><i class="material-icons left">save</i>Save</button>
+                        <input type="hidden" name="edit" id="edit">
+                        <input type="hidden" name="hiddenstatus" id="hiddenstatus">
+                        <div class="preloader-wrapper small active right" style="margin-right:1rem;display:none;">
+                            <div class="spinner-layer spinner-green-only">
+                                <div class="circle-clipper left">
+                                    <div class="circle"></div>
+                                </div><div class="gap-patch">
+                                    <div class="circle"></div>
+                                </div><div class="circle-clipper right">
+                                    <div class="circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row success-container" style="display:none;">
+                    <div class="col s12 main-green white-text">
+                        <br>
+                        <i class="material-icons left">thumb_up</i>Data was saved successfully!						<br><br>
+                    </div>
+                </div>
+                <div class="row error-container" style="display:none;">
+                    <div class="col s12 red white-text">
+                        <br>
+                        <i class="material-icons left">thumb_down</i>Something went wrong!						<br><br>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col s12 l6 white z-depth-1" id="datalist">
+
+            <div id="table-list">
+                @Html.Partial("~/Views/Debtors/_GetGrid.cshtml", Model)
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    $(function () { setlist({ target: "/Debtors", MaxResultCount:@Model.PageSize,SkipCount:@Model.Debtors.Items.Count }); });
+</script>

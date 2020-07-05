@@ -1,0 +1,105 @@
+﻿using System.Web.Mvc;
+using Abp.Web.Mvc.Authorization;
+using incasso.Dashboard;
+using incasso.Dashboard.dto;
+using System.Threading.Tasks;
+using incasso.Debtos;
+using Incasso.Administrators;
+using incasso.Administrators.dto;
+using Abp.AutoMapper;
+using Incasso.MultiTenancy.Dto;
+using incasso.Invoices;
+using incasso.Invoices.Dto;
+using incasso.Catalogs;
+using System.Linq;
+
+namespace Collection.Web.Controllers
+{
+    [AbpMvcAuthorize]
+    public class DashboardController : ControllerBase
+    {
+        public IDashboardManager _dashboardManager { get; set; }
+        public DebtorManager _debtorManager{ get; set; }
+        public AdministratorManager _adminManager{ get; set; }
+        public IInvoiceManager  _invoiceManager { get; set; }
+        public DashboardController(IInvoiceManager invoiceManager ,AdministratorManager adminManager,IDashboardManager dashboardManager, DebtorManager debtorManager)
+        {
+            _invoiceManager = invoiceManager;
+            _adminManager = adminManager;
+            _debtorManager = debtorManager;
+            _dashboardManager = dashboardManager;
+        }
+        public async Task<ActionResult> Index()
+        {
+            var model= await _dashboardManager.GetCollectionDashbaordSearchGrid(PortalType.Collection);
+            return View(model);
+        }
+        [HttpPost]
+        public async Task<ActionResult> AdminDetails(int debtorId)
+        {
+            var admin = await _adminManager.GetAdminByDebtorId(debtorId);
+            var admindto = admin.MapTo<AdministratorDto>();
+            return View(admindto);
+        }
+        [HttpPost]
+
+        public async Task<ActionResult> Graph(int debtorId)
+        {
+            GraphDto graphDto =await _dashboardManager.GetGraph(debtorId);
+          
+            return View(graphDto);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> InvoiceDetails(int debtorId)
+        {
+            var dashboardDto = new CollectionDashboardDto()
+            {
+                InvoiceList = await _invoiceManager.GetDebtorInvoiceList(
+                    new CriteriaInvoiceSearch {
+                        Closed =false, InvoiceType = PortalType.Collection, DebtorId = debtorId
+                    })
+            };
+            return View(dashboardDto);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> DebtorDetails(int debtorId)
+        {
+            var debtor =await  _debtorManager.GetByIdAsync(debtorId);
+            var dto = debtor.MapTo<DebtorDto>();
+            return View(dto);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> InvoiceClosedDetails(int debtorId)
+        {
+            var dashboardDto = new CollectionDashboardDto()
+            {
+                InvoiceList = await _invoiceManager.GetDebtorInvoiceList(new CriteriaInvoiceSearch { InvoiceType= PortalType.Collection, Closed=true, DebtorId=debtorId})
+            };
+            return View(dashboardDto);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> DebtorList(string query)
+        {
+            var model = await _dashboardManager.GetCollectionDashbaordSearchGrid(PortalType.Collection);
+            return View("_DebtorList", model);
+        }
+        [HttpGet]
+        public async Task<FileResult> InvoiceDownload(int debtorId, bool? isClosed = false)
+        {
+            FileStreamResult filestreamResult= null;
+            var virtualPath = $"~/Scripts/public/images/Logo-menu.png";
+            var root = Server.MapPath(virtualPath);
+
+            if (isClosed??false)
+                 filestreamResult = await _dashboardManager.ExportCloseCollectionInvoice(new InvoiceDownloadInput { DebtorId = debtorId, IsClosedInvoice = isClosed.Value, Portal = PortalType.Collection }, root);
+            else
+                 filestreamResult = await _dashboardManager.ExportOpenCollectionInvoice(new InvoiceDownloadInput { DebtorId = debtorId, IsClosedInvoice = isClosed.Value, Portal = PortalType.Collection }, root);
+
+            return filestreamResult; 
+        }
+    }
+}

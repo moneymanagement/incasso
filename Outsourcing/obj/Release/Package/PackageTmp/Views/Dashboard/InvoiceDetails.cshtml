@@ -1,0 +1,114 @@
+﻿@using incasso.Helper
+@model  incasso.Dashboard.dto.CollectionDashboardDto
+@{
+    Layout = null;
+}
+<a href="#!" class="btn waves-effect waves-light main-green" id="btn_dwl_invoice"><i class="material-icons left">file_download</i> @L("Excel")</a>
+<br /><label class="right">@L("ClickToSeeNotes")</label>
+<table class="highlight striped bordered" id="invoice-table">
+    <thead>
+        <tr>
+            <th width="10%">@L("Invoicenr")</th>
+            <th width="10%">@L("Date")</th>
+            <th width="10%">@L("DueDate")</th>
+            <th class="right-align" width="5%">@L("Exp")</th>
+            <th class="right-align" width="10%">@L("InvoiceAmount")</th>
+            <th class="right-align" width="10%">@L("Openamt")</th>
+            <th class="right-align" width="10%" style="white-space:nowrap;">@L("Admcosts")</th>
+            <th class="right-align" width="10%">@L("PaidAmt")</th>
+            <th width="10%">@L("Dispute")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.InvoiceList != null && Model.InvoiceList.Any())
+        {
+            var index = 0;
+            foreach (var invoice in Model.InvoiceList)
+            {
+                index += 1;
+                int days = 0;
+                DateTime? expired = invoice.ExpiredDate.ToDate();
+                DateTime? paymentDate = DateTime.Now;
+                if (expired.HasValue && paymentDate.HasValue)
+                {
+                    days = (int) ((expired.Value - paymentDate.Value).TotalDays);
+                }
+
+        <tr id="INV@(invoice.Id)" class="invoice-row clickable">
+            <td>
+                @if (this.User.IsInRole(Incasso.Authorization.Roles.StaticRoleNames.Host.Admin) || this.User.IsInRole(Incasso.Authorization.Roles.StaticRoleNames.Editor))
+                {
+                    <input class="c-checkbox" type="checkbox" name="selectedInvoice[]" value="@invoice.Id" id="@invoice.Id" />
+                }
+                <span>@invoice.InvoiceNo</span>
+            </td>
+            <td>@(invoice.InvoiceDate.ToGridDateFormat())</td>
+            <td>@(invoice.ExpiredDate.ToGridDateFormat())</td>
+            <td class="right-align @(days<0? "red-text":"")"> @string.Format(System.Globalization.CultureInfo.GetCultureInfo("de-DE"), "{0:#,0.####}", days) </td>
+            <td class="right-align">@invoice.Currency@invoice.Amount.ToIncassoGridFormat() </td>
+            <td class="right-align">@invoice.Currency@invoice.Open.ToIncassoGridFormat() </td>
+            <td class="right-align"> @invoice.Currency@(invoice.AdminCosts.ToIncassoGridFormat()) </td>
+            <td class="right-align"> @invoice.Currency@(invoice.Paid.ToIncassoGridFormat()) </td>
+            <td>  @(invoice.DisputeAction)  </td>
+        </tr>
+                <tr class="invoice-notes" data-invoice="@invoice.Id" style="@(index==1?"":"display:none;");?>">
+                    <td colspan="10">
+                        <div class="section">
+                            @if (invoice.Notes != null && invoice.Notes.Any())
+                            {
+                                foreach (var note in invoice.Notes.OrderByDescending(x => x.NoteDate))
+                                {
+                                    <div class="note-block" data-id="@note.Id">
+                                        <div id="note_view_@note.Id" data-id="@note.Id" class="noteDiv">
+                                            @if (this.User.IsInRole(Incasso.Authorization.Roles.StaticRoleNames.Host.Admin) ||
+                                             this.User.IsInRole(Incasso.Authorization.Roles.StaticRoleNames.Editor))
+                                            {
+                                                <a class="note_delete x  btn right" data-id="@note.Id"><i class="material-icons">delete</i></a>
+                                                <a class="note_edit x btn right" data-id="@note.Id"><i class="material-icons">edit</i></a>
+                                            }
+                                            <span class="semibold">@(note.NoteDate.HasValue ? note.NoteDate.Value.ToGridFormat() : "" )</span>:<br />
+                                            <p class="note">@Html.Raw(note.Notes)</p>
+                                        </div>
+                                        @if (this.User.IsInRole(Incasso.Authorization.Roles.StaticRoleNames.Host.Admin) ||
+                                                                             this.User.IsInRole(Incasso.Authorization.Roles.StaticRoleNames.Editor))
+                                        {
+                                            <div id="note_edit_@note.Id" data-id="@note.Id" style="display:none;">
+                                                <a class="note_delete x  btn right" data-id="@note.Id"><i class="material-icons">delete</i></a>
+                                                <a class="note_update x  btn right" data-id="@note.Id"><i class="material-icons">save</i></a>
+                                                <a class="note_back x btn right" data-id="@note.Id"><i class="material-icons">arrow_back</i></a>
+                                                <div style="clear: both;">
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col s12 l6">
+                                                        <input class="datepicker" type="text" data-value="@(note.NoteDate.HasValue ? note.NoteDate.Value.ToGridFormat() : "" )" name="note_date_@note.Id" id="note_date_@note.Id" />
+                                                    </div>
+                                                    <div class="col s12 l6">
+                                                        <input type="text" value="@note.Notes" name="note_text_@note.Id" id="note_text_@note.Id" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <span class="grey-text text-darken-2">@L("NoNotesToDisplay")</span>
+                            }
+                        </div>
+
+
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr class="invoice-notes">
+                <td colspan="9" class="text-center"> @L("NoInvoiceToDisplay")</td>
+            </tr>
+
+        }
+    </tbody>
+</table>

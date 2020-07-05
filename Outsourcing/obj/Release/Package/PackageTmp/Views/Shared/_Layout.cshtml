@@ -1,0 +1,132 @@
+﻿@using System.Threading
+@using System.Web.Optimization
+@using Abp.Configuration
+@using Abp.Timing
+@using Outsourcing
+@using Incasso.Configuration
+@using Abp.Dependency
+@using Abp.Web.Mvc.Alerts
+@using Abp.Web.Mvc.Extensions
+@using Outsourcing.Web.App_Start
+@using Outsourcing.Web.Helpers
+@{
+    Layout = null;
+    SetAntiForgeryCookie();
+    var uiTheme = SettingManager.GetSettingValue(AppSettingNames.UiTheme);
+    AlertList alerts = null;
+    IocManager.Instance.Using<IAlertManager>(alertManager => alerts = alertManager.Alerts);
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Incasso</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="~/Scripts/materialize/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="~/Scripts/public/css/animate.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="~/Scripts/public/css/style.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="~/Scripts/public/css/dropzone.css" media="screen,projection" />
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="~/Scripts/materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/public/js/dropzone.js"></script>
+    <script type="text/javascript" src="~/Scripts/public/js/mark.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/materialize/js/materialize-pagination.js"></script>
+    <script type="text/javascript" src="~/Scripts/public/js/main.js"></script>
+
+    @RenderSection("styles", required: false)
+    <title>@ViewBag.ActiveMenu</title>
+    <script type="text/javascript">
+        var abp = abp || {}; abp.appPath = '@ApplicationPath';
+        var hostName = '@Request.Url.Scheme://@Request.Url.Host';
+        var apiURL = abp.appPath+ 'api/services/app/';
+    </script>
+
+    <link rel="shortcut icon" type="image/x-icon" href=".ico" />
+
+</head>
+<body>
+    <header>
+        <div class="navbar-fixed top-nav">
+            <nav class="top-nav">
+                <div class="nav-wrapper black white-text right-align">
+                    <div class="left module">@L("Outsourcing")</div>
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <div class="right" style="display:block;">
+                            <a href="/Account/Logout" class="logout center"><i class="material-icons">exit_to_app</i></a>
+                        </div>
+                        <div class="right">
+                            <span class="white-text name truncate">@User.Identity.Name</span>
+                        </div>
+                    }
+                    <div class="right">
+                        <a href="/AbpLocalization/ChangeCulture?cultureName=nl-NL&amp;"> Nederlands</a>  |
+                        <a href="/AbpLocalization/ChangeCulture?cultureName=en&amp;">  English</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="navbar-fixed">
+        <nav class="main-green">
+            <div class="nav-wrapper container" style="overflow:hidden;">
+                <a href='/Dashboard' class="brand-logo left">
+                    <img src="~/Images/logo-small.png" class="responsive-img" />
+                </a>
+                <div class="col input-field s12 right hide-on-med-and-down maincontent">
+                    <i class="material-icons prefix">search</i>
+                    <input id="search0" class="search" type="text" placeholder="@L("Search")" />
+                </div>
+            </div>
+            <div class="progress main-green">
+                <div class="indeterminate green darken-2" style="display:none;"></div>
+            </div>
+        </nav>
+    </div>
+
+
+    <main>
+        @RenderBody()
+
+        <div id="confirm-box" class="modal">
+            <div class="modal-content">
+                @L("UserDeleteOptionMessage")
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="waves-effect btn-flat" id="confirm-box_NoBtn">@L("Cancel")</a>
+                <a href="#" class="waves-effect waves-light btn-flat" id="confirm-box_YesBtn">@L("Yes")</a>
+            </div>
+        </div>
+    </main>
+    <footer class="center page-footer grey-text">
+        @L("ContactUsMessage")  beheer@mmincasso.nl
+        <div class="footer-copyright center grey-text">
+            <div class="container">
+                Copyright &copy;  @DateTime.Now.ToString("yyyy") Money Management
+            </div>
+        </div>
+    </footer>
+    @Scripts.Render("~/Bundles/account-vendor/js/bottom")
+
+    <script> moment.locale('@Thread.CurrentThread.CurrentUICulture.Name'); 
+      $( document ).ajaxComplete(function( event, xhr, settings ) {
+        if(xhr.responseJSON && xhr.responseJSON.UnAuthorizedRequest)
+        { 
+        history.go(0)
+        }
+  
+});
+    </script>
+    <script src="~/api/AbpServiceProxies/GetAll?v=@(Clock.Now.Ticks)"></script>
+    <script src="~/AbpScripts/GetScripts?v=@(Clock.Now.Ticks)" type="text/javascript"></script>
+    @RenderSection("scripts", required: false)
+    @Html.PartialViewScripts()
+</body>
+    </html>

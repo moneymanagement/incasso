@@ -1,0 +1,118 @@
+﻿@using System.Web.Optimization
+@using Abp.Web.Mvc.Extensions
+
+@model Incasso.MultiTenancy.Dto.AdministratorViewModel
+@{
+    ViewBag.ActiveMenu = PageNames.Administrations; //The menu item will be active for this page.
+}
+@section styles {
+    <link href="~/lib/morris.js/morris.css" rel="stylesheet" />
+}
+@section scripts{
+@Html.IncludeScript("~/Views/Administrations/Administration.js")
+
+
+}
+
+
+<div class="section">
+    <div class="row">
+        <div class="col s12 l6">
+            <form id="form_admins" enctype="multipart/form-data" method="post">
+                <div class="row">
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Name" id="Name" class="validate">
+                        <label for="Name">Name</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Number" id="Number" class="validate">
+                        <label for="Number" class="">Administration number</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Contact" id="Contact" class="">
+                        <label for="Contact">Contact person</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Email" id="Email" class="">
+                        <label for="Email">E-mail</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Phone" id="Phone" class="">
+                        <label for="Phone">Phone number</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Phone2" id="Phone2" class="">
+                        <label for="Phone2">Mobile</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Bank" id="Bank" class="">
+                        <label for="Bank">Bank</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Account" id="Account" class="">
+                        <label for="Account">Account nr.</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Iban" id="Iban" class="">
+                        <label for="Iban">IBAN</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Bic" id="Bic" class="">
+                        <label for="Bic">BIC</label>
+                    </div>
+                    <div class="col s12">
+                        <label>View Users</label><br>
+                        @foreach (var User in Model.Users)
+                        {
+                            <div class="left padding-05">
+                                <input type="checkbox" id="User@(User.Id)" value="@User.Id">
+                                <label for="User@(User.Id)">@User.UserName</label>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <button type="button" id="btn_submit" class="btn waves-effect waves-light"><i class="material-icons left">save</i>Save</button>
+                        <input type="hidden" name="edit" id="edit">
+                        <div class="preloader-wrapper small active right" style="margin-right:1rem;display:none;">
+                            <div class="spinner-layer spinner-green-only">
+                                <div class="circle-clipper left">
+                                    <div class="circle"></div>
+                                </div><div class="gap-patch">
+                                    <div class="circle"></div>
+                                </div><div class="circle-clipper right">
+                                    <div class="circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row success-container" style="display:none;">
+                    <div class="col s12 main-green white-text">
+                        <br>
+                        <i class="material-icons left">thumb_up</i>Data was saved successfully!						<br><br>
+                    </div>
+                </div>
+                <div class="row error-container" style="display:none;">
+                    <div class="col s12 red white-text">
+                        <br>
+                        <i class="material-icons left">thumb_down</i>Something went wrong!						<br><br>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col s12 l6 white z-depth-1" id="datalist">
+
+
+            <div id="table-list">
+                @Html.Partial("~/Views/Administrations/_GetGrid.cshtml", Model)
+            </div>
+        </div>
+    </div>
+</div>
+ 
+ 
+<script>
+    $(function () { setlist({ target: "/Administrations", MaxResultCount:@Model.PageSize,SkipCount:@Model.Administrators.Items.Count }); });
+</script>

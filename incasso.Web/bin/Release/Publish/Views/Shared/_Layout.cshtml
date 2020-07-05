@@ -1,0 +1,123 @@
+﻿@using System.Threading
+@using System.Web.Optimization
+@using Abp.Configuration
+@using Abp.Timing
+@using Incasso
+@using Incasso.Configuration
+@using Abp.Dependency
+@using Abp.Web.Mvc.Alerts
+@using Abp.Web.Mvc.Extensions
+@using Incasso.Web.App_Start
+@using Incasso.Web.Helpers
+@{
+    Layout = null;
+    SetAntiForgeryCookie();
+    var uiTheme = SettingManager.GetSettingValue(AppSettingNames.UiTheme);
+    AlertList alerts = null;
+    IocManager.Instance.Using<IAlertManager>(alertManager => alerts = alertManager.Alerts);
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="~/Scripts/materialize/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="~/Scripts/public/css/animate.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="~/Scripts/public/css/style.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="~/Scripts/public/css/dropzone.css" media="screen,projection" />
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="~/Scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="~/Scripts/materialize/js/materialize.js"></script>
+    <script type="text/javascript" src="~/Scripts/public/js/dropzone.js"></script>
+    <script type="text/javascript" src="~/Scripts/public/js/mark.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/materialize/js/materialize-pagination.js"></script>
+    <script type="text/javascript" src="~/Scripts/public/js/main.js"></script>
+
+    @Scripts.Render("~/Bundles/account-vendor/js/bottom")
+    @RenderSection("styles", required: false)
+    <title>@ViewBag.ActiveMenu</title>
+    <script type="text/javascript">
+        var abp = abp || {}; abp.appPath = '@ApplicationPath';
+        var hostName = '@Request.Url.Scheme://@Request.Url.Host';
+        var apiURL = abp.appPath+ 'api/services/app/';
+    </script>
+
+    <link rel="shortcut icon" type="image/x-icon" href=".ico" />
+
+</head>
+<body>
+    <header>
+        <div class="top-nav black white-text right-align">
+            <div class="left module">Backend  </div>
+
+
+            @if (User.Identity.IsAuthenticated)
+            {
+                <div class="right" style="display:block;">
+                    <a href="/Account/Logout" class="logout center"><i class="material-icons">exit_to_app</i></a>
+                </div>
+                <div class="right">
+                    <span class="white-text name truncate">@User.Identity.Name</span>
+                </div>
+            }
+            <div class="right">
+                <a href="/AbpLocalization/ChangeCulture?cultureName=nl-NL&amp;"><i class="famfamfam-flags nl"></i> Nederlands</a>  |
+                <a href="/AbpLocalization/ChangeCulture?cultureName=en&amp;"><i class="famfamfam-flags gb"></i> English</a>
+            </div>
+        </div>
+    </header>
+    <nav class="nav-extended main-green">
+        <div class="nav-wrapper container">
+            <a href='/Dashboard' class="brand-logo left">
+                <img src="~/Images/logo-small.png" class="responsive-img" />
+            </a>
+            @Html.Action("SideBarNav", "Layout", new { activeMenu = ViewBag.ActiveMenu })
+        </div>
+        <div class="nav-header center hide-on-med-and-down">
+            <h1 class="semibold center">@L(@Html.Controller().ToString()) </h1>
+        </div>
+    </nav>
+    <div class="progress main-green">
+        <div class="indeterminate green darken-2" style="display:none;"></div>
+    </div>
+    @RenderBody()
+    <div id="customErrors" style="display: none;">
+        <div class="row error-container" >
+                    <div class="col s6 red white-text">
+                        <br>
+                        <i class="material-icons left">thumb_down</i><span> 	</span>				<br><br>
+                    </div>
+                </div>
+    </div>
+    <div id="confirm-box" class="modal">
+        <div class="modal-content">
+            @L("UserDeleteOptionMessage")
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="waves-effect btn-flat" id="confirm-box_NoBtn">@L("Cancel")</a>
+            <a href="#" class="waves-effect waves-light btn-flat" id="confirm-box_YesBtn">@L("Yes")</a>
+        </div>
+    </div>
+    <script>
+    //Localizing momentjs
+    moment.locale('@Thread.CurrentThread.CurrentUICulture.Name');
+    $( document ).ajaxComplete(function( event, xhr, settings ) {
+        if(xhr.responseJSON && xhr.responseJSON.UnAuthorizedRequest)
+        { 
+        history.go(0)
+        }
+  
+});
+    </script>
+    <script src="~/api/AbpServiceProxies/GetAll?v=@(Clock.Now.Ticks)"></script>
+    <script src="~/AbpScripts/GetScripts?v=@(Clock.Now.Ticks)" type="text/javascript"></script>
+    <!-- View specific scripts -->
+    @RenderSection("scripts", required: false)
+    @Html.PartialViewScripts()
+</body>
+</html>

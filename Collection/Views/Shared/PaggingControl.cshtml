@@ -1,0 +1,25 @@
+﻿
+
+@*<script>
+     var defaultPageOptions = {   RequestedPage:@Model.RequestedPage, PageSize:@Model.PageSize};
+</script>
+
+
+<ul class="pagination center">
+    @if (Math.Ceiling((double)(Model.Administrators.TotalCount / Model.PageSize)) > 1)
+    {
+        <li class="waves-effect chevron @(Model.RequestedPage==0?"disabled":"")" data-page="-1"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        for (int i = 0; i < Math.Ceiling((double)(Model.Administrators.TotalCount / Model.PageSize)); i++)
+        {
+            if (i == 0)
+            {
+                <li class=" pageli waves-effect @(i==Model.RequestedPage?"active main-green":"") " data-page="@i"><a href="#!">@(i + 1)</a></li>
+            }
+            else
+            {
+                <li class="pageli waves-effect @(i==Model.RequestedPage?"active main-green":"") " data-page="@(i)"><a href="#!">@(i + 1)</a></li>
+            }
+        }
+        <li class="waves-effect chevron @(Model.RequestedPage+1==Math.Ceiling((double)(Model.Administrators.TotalCount / Model.PageSize))?"disabled":"")" data-page="1"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+    }
+</ul>*@

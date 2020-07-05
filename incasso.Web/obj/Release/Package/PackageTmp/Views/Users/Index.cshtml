@@ -1,0 +1,104 @@
+﻿@using Abp.Web.Mvc.Extensions
+@model Incasso.Users.Dto.UserListViewModel
+@{
+    ViewBag.ActiveMenu = PageNames.Users;
+}
+@section scripts
+{
+    @Html.IncludeScript("~/Views/Users/Index.js")
+}
+<div class="section">
+    <div class="row">
+        <div class="col s12 l6">
+            <form id="form_users" enctype="multipart/form-data" method="post" action="?users/add" autocomplete="off">
+                <div class="row">
+                    <div class="input-field col s12 l6">
+                        <input type="text" name="Name" id="Name" class="validate valid" value="" autocomplete="off">
+                        <label for="Name" class="active">User Name</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input type="password" name="Password" autocomplete="off" value="" id="Password"  >
+                        <label for="Password" class="active">Password</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <select class="icons validate" name="Role" id="Role">
+                            <option value="" disabled selected>@L("ChooseARole")</option>
+                            @foreach (var role in Model.Roles)
+                            {
+                                <option value="@role.Name">@role.DisplayName</option>
+                            }
+                        </select>
+                        <label>@L("Role")</label>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 l6 viewer" style="display:none;">
+                        <label>Administrations</label><br>
+                        @foreach (var item in Model.Administrations)
+                        {
+                            <div class="left padding-05">
+                                <input type="checkbox" id="Admin@(item.Id)" value="@item.Id">
+                                <label for="Admin@(item.Id)">@item.Name</label>
+                            </div>
+
+                        }
+
+                    </div>
+                    <div class="col s12 l6 viewer" style="display:none;">
+                        <label>Portals</label><br>
+                        <div class="left padding-05">
+                            <input type="checkbox" id="Incasso" value="1">
+                            <label for="Incasso">@L("Collection")</label>
+                        </div>
+                        <div class="left padding-05">
+                            <input type="checkbox" id="OutSourcing" value="1">
+                            <label for="OutSourcing">@L("Outsourcing")</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <button type="button" id="btn_submit" class="btn waves-effect waves-light"><i class="material-icons left">save</i>Save</button>
+                        <input type="hidden" name="edit" id="edit">
+                        <div class="preloader-wrapper small active right" style="margin-right:1rem;display:none;">
+                            <div class="spinner-layer spinner-green-only">
+                                <div class="circle-clipper left">
+                                    <div class="circle"></div>
+                                </div><div class="gap-patch">
+                                    <div class="circle"></div>
+                                </div><div class="circle-clipper right">
+                                    <div class="circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row error-container" style="display:none;">
+                    <div class="col s12 red white-text">
+                        <br>
+                        <i class="material-icons left">thumb_down</i>Something went wrong!						<br><br>
+                    </div>
+                </div>
+                <div class="row success-container" style="display:none;">
+                    <div class="col s12 main-green white-text">
+                        <br>
+                        <i class="material-icons left">thumb_up</i>Data was saved successfully!<br><br>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col s12 l6 white z-depth-1">
+            @*<div id="paginationItems"></div>*@
+            <div id="datalist">
+                @Html.Partial("~/Views/Users/_GetGrid.cshtml", Model)
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(function () { setlist({ target: "/users", MaxResultCount:@Model.PageSize,SkipCount:@Model.Users.Items.Count }); });
+</script>

@@ -1,0 +1,665 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2018-02-14 17:41-0400\n"
+"PO-Revision-Date: 2018-02-14 17:41-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.4\n"
+"X-Poedit-Basepath: ../../../../app\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: controllers/backend/AdministrationsController.class.php:11
+#: controllers/backend/AdministrationsController.class.php:12
+#: views/backend/index.php:17 views/backend/index.php:54
+#: views/backend/menu.php:9 views/backend/upload.php:15
+#: views/backend/users.php:25 views/backend/users_list.php:11
+msgid "Administrations"
+msgstr "Administrations"
+
+#: controllers/backend/DebtorsController.class.php:8
+#: controllers/backend/DebtorsController.class.php:9 views/backend/index.php:26
+#: views/backend/menu.php:10
+msgid "Debtors"
+msgstr "Debtors"
+
+#: controllers/backend/IndexController.class.php:20
+#: controllers/backend/IndexController.class.php:21
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: controllers/backend/LoginController.class.php:6
+#: controllers/collection/LoginController.class.php:6
+#: controllers/outsourcing/LoginController.class.php:6
+#: views/collection/login.php:39 views/outsourcing/login.php:39
+msgid "Log In"
+msgstr "Log In"
+
+#: controllers/backend/UploadController.class.php:8
+#: controllers/backend/UploadController.class.php:9
+msgid "Upload Data"
+msgstr "Upload data"
+
+#: controllers/backend/UsersController.class.php:8
+#: controllers/backend/UsersController.class.php:9 views/backend/index.php:8
+#: views/backend/menu.php:8
+msgid "Users"
+msgstr "Users"
+
+#: controllers/collection/IndexController.class.php:6
+#: models/collection/InvoiceModel.class.php:109
+#: models/collection/InvoiceModel.class.php:215 views/backend/upload.php:28
+#: views/backend/users.php:40 views/collection/header.php:22
+msgid "Collection"
+msgstr "Collection"
+
+#: controllers/collection/IndexController.class.php:7
+#: controllers/outsourcing/IndexController.class.php:7
+#: views/backend/index.php:45
+msgid "Overview"
+msgstr "Overview"
+
+#: controllers/outsourcing/IndexController.class.php:6
+#: models/outsourcing/InvoiceModel.class.php:39
+#: models/outsourcing/InvoiceModel.class.php:143 views/backend/upload.php:26
+#: views/backend/users.php:44
+msgid "Outsourcing"
+msgstr "Outsourcing"
+
+#: models/collection/InvoiceModel.class.php:114
+#: models/collection/InvoiceModel.class.php:162
+#: models/outsourcing/InvoiceModel.class.php:44
+#: models/outsourcing/InvoiceModel.class.php:91
+#: views/collection/invoice_closed_info.php:6
+#: views/collection/invoice_info.php:6
+#: views/outsourcing/invoice_closed_info.php:6
+#: views/outsourcing/invoice_info.php:6
+msgid "Invoice #"
+msgstr "Invoice nr."
+
+#: models/collection/InvoiceModel.class.php:115
+#: models/collection/InvoiceModel.class.php:163
+#: models/outsourcing/InvoiceModel.class.php:45
+#: models/outsourcing/InvoiceModel.class.php:92 views/backend/upload_list.php:9
+#: views/collection/invoice_closed_info.php:7
+#: views/collection/invoice_info.php:7
+#: views/outsourcing/invoice_closed_info.php:7
+#: views/outsourcing/invoice_info.php:7
+msgid "Date"
+msgstr "Date"
+
+#: models/collection/InvoiceModel.class.php:116
+#: models/collection/InvoiceModel.class.php:164
+#: models/outsourcing/InvoiceModel.class.php:46
+#: models/outsourcing/InvoiceModel.class.php:93
+#: views/collection/invoice_closed_info.php:8
+#: views/collection/invoice_info.php:8
+#: views/outsourcing/invoice_closed_info.php:8
+#: views/outsourcing/invoice_info.php:8
+msgid "Due Date"
+msgstr "Due Date"
+
+#: models/collection/InvoiceModel.class.php:117
+#: models/collection/InvoiceModel.class.php:167
+#: models/outsourcing/InvoiceModel.class.php:48
+#: models/outsourcing/InvoiceModel.class.php:96
+#: views/collection/invoice_closed_info.php:11
+#: views/collection/invoice_info.php:10
+#: views/outsourcing/invoice_closed_info.php:11
+#: views/outsourcing/invoice_info.php:10
+msgid "Amount"
+msgstr "Invoice amt."
+
+#: models/collection/InvoiceModel.class.php:118
+#: models/outsourcing/InvoiceModel.class.php:50
+msgid "Open Amount"
+msgstr "Open amount"
+
+#: models/collection/InvoiceModel.class.php:119 views/collection/graph.php:23
+msgid "Interest"
+msgstr "Interest"
+
+#: models/collection/InvoiceModel.class.php:120
+msgid "Collection Costs"
+msgstr "Collection Charges"
+
+#: models/collection/InvoiceModel.class.php:121
+#: views/collection/invoice_info.php:12
+msgid "Paid MM"
+msgstr "Paid MM"
+
+#: models/collection/InvoiceModel.class.php:122
+#: views/collection/invoice_info.php:13
+msgid "Paid Client"
+msgstr "Paid Client"
+
+#: models/collection/InvoiceModel.class.php:123
+msgid "Total Payment"
+msgstr "Total payment"
+
+#: models/collection/InvoiceModel.class.php:124
+#: views/collection/debtor_info.php:41 views/collection/invoice_info.php:14
+#: views/outsourcing/debtor_info.php:37
+msgid "Status"
+msgstr "Status"
+
+#: models/collection/InvoiceModel.class.php:125
+#: models/collection/InvoiceModel.class.php:168
+#: models/outsourcing/InvoiceModel.class.php:53
+#: models/outsourcing/InvoiceModel.class.php:97 views/backend/debtors.php:57
+#: views/collection/debtor_info.php:65 views/outsourcing/debtor_info.php:61
+msgid "Notes"
+msgstr "Notes"
+
+#: models/collection/InvoiceModel.class.php:143
+#: models/collection/InvoiceModel.class.php:189
+#: models/outsourcing/InvoiceModel.class.php:74
+#: models/outsourcing/InvoiceModel.class.php:118
+#: views/collection/debtor_list.php:25 views/collection/debtor_list.php:58
+#: views/outsourcing/debtor_list.php:25 views/outsourcing/debtor_list.php:59
+msgid "Debtor"
+msgstr "Debtor"
+
+#: models/collection/InvoiceModel.class.php:165
+#: models/outsourcing/InvoiceModel.class.php:94
+#: views/collection/invoice_closed_info.php:9
+msgid "Payment Date"
+msgstr "Payment date"
+
+#: models/collection/InvoiceModel.class.php:166
+#: models/outsourcing/InvoiceModel.class.php:47
+#: models/outsourcing/InvoiceModel.class.php:95
+#: views/collection/invoice_closed_info.php:10
+msgid "Expired"
+msgstr "Expired"
+
+#: models/collection/InvoiceModel.class.php:215
+#: models/outsourcing/InvoiceModel.class.php:143 views/collection/graph.php:64
+#: views/outsourcing/graph.php:12
+msgid "Open"
+msgstr "Open"
+
+#: models/collection/InvoiceModel.class.php:215
+#: models/outsourcing/InvoiceModel.class.php:143
+msgid "Closed"
+msgstr "Closed"
+
+#: models/collection/InvoiceModel.class.php:215
+#: models/outsourcing/InvoiceModel.class.php:143 views/collection/graph.php:11
+msgid "Invoices"
+msgstr "Invoice(s)"
+
+#: models/outsourcing/InvoiceModel.class.php:49 views/collection/graph.php:35
+msgid "Administration Costs"
+msgstr "Administration costs"
+
+#: models/outsourcing/InvoiceModel.class.php:51
+msgid "Paid Amount"
+msgstr "Paid amount"
+
+#: models/outsourcing/InvoiceModel.class.php:52
+#: views/outsourcing/invoice_info.php:14
+msgid "Dispute"
+msgstr "Dispute"
+
+#: views/backend/administrations.php:8 views/backend/administrations_list.php:9
+#: views/backend/debtors.php:17 views/backend/debtors_list.php:11
+#: views/backend/users_list.php:9 views/collection/admin_info.php:9
+#: views/collection/debtor_info.php:13 views/outsourcing/admin_info.php:9
+#: views/outsourcing/debtor_info.php:9
+msgid "Name"
+msgstr "Name"
+
+#: views/backend/administrations.php:12
+#: views/backend/administrations_list.php:10
+msgid "Administration number"
+msgstr "Administration number"
+
+#: views/backend/administrations.php:16 views/backend/debtors.php:25
+#: views/collection/admin_info.php:13 views/collection/debtor_info.php:17
+#: views/outsourcing/admin_info.php:13 views/outsourcing/debtor_info.php:13
+msgid "Contact person"
+msgstr "Contact person"
+
+#: views/backend/administrations.php:20 views/backend/debtors.php:29
+#: views/collection/admin_info.php:21 views/collection/debtor_info.php:29
+#: views/outsourcing/admin_info.php:21 views/outsourcing/debtor_info.php:25
+msgid "E-mail"
+msgstr "E-mail"
+
+#: views/backend/administrations.php:24 views/backend/debtors.php:33
+#: views/collection/admin_info.php:17 views/collection/debtor_info.php:21
+#: views/outsourcing/admin_info.php:17 views/outsourcing/debtor_info.php:17
+msgid "Phone"
+msgstr "Phone number"
+
+#: views/backend/administrations.php:28 views/backend/debtors.php:37
+#: views/collection/debtor_info.php:25 views/outsourcing/debtor_info.php:21
+msgid "Mobile / Fax"
+msgstr "Mobile"
+
+#: views/backend/administrations.php:32 views/collection/admin_info.php:29
+#: views/outsourcing/admin_info.php:29
+msgid "Bank"
+msgstr "Bank"
+
+#: views/backend/administrations.php:36 views/collection/admin_info.php:33
+msgid "Account #"
+msgstr "Account nr."
+
+#: views/backend/administrations.php:40 views/collection/admin_info.php:37
+#: views/outsourcing/admin_info.php:37
+msgid "IBAN"
+msgstr "IBAN"
+
+#: views/backend/administrations.php:44 views/collection/admin_info.php:41
+#: views/outsourcing/admin_info.php:41
+msgid "BIC"
+msgstr "BIC"
+
+#: views/backend/administrations.php:47 views/backend/index.php:52
+msgid "View users"
+msgstr "View users"
+
+#: views/backend/administrations.php:60 views/backend/debtors.php:66
+#: views/backend/users.php:50
+msgid "Save"
+msgstr "Save"
+
+#: views/backend/administrations.php:78 views/backend/debtors.php:84
+#: views/backend/upload.php:61 views/backend/users.php:68
+msgid "Data was saved successfully!"
+msgstr "Data was saved successfully!"
+
+#: views/backend/administrations.php:85 views/backend/debtors.php:91
+#: views/backend/upload.php:68
+msgid "Something went wrong!"
+msgstr "Something went wrong!"
+
+#: views/backend/administrations_list.php:3 views/backend/debtors_list.php:3
+#: views/backend/upload_list.php:3 views/backend/users_list.php:3
+#: views/collection/debtor_list.php:10 views/collection/menu.php:9
+#: views/outsourcing/debtor_list.php:10 views/outsourcing/menu.php:9
+msgid "Search terms..."
+msgstr "Search terms..."
+
+#: views/backend/debtors.php:8
+msgid "Choose an administration"
+msgstr "Choose an administration"
+
+#: views/backend/debtors.php:13 views/backend/debtors_list.php:9
+msgid "Administration"
+msgstr "Administration"
+
+#: views/backend/debtors.php:21 views/backend/debtors_list.php:10
+msgid "Debtor number"
+msgstr "Debtor number"
+
+#: views/backend/debtors.php:41 views/collection/debtor_info.php:45
+#: views/outsourcing/debtor_info.php:41
+msgid "Address"
+msgstr "Address"
+
+#: views/backend/debtors.php:45 views/collection/debtor_info.php:49
+#: views/outsourcing/debtor_info.php:45
+msgid "Postal code"
+msgstr "Postal code"
+
+#: views/backend/debtors.php:49 views/collection/debtor_info.php:53
+#: views/outsourcing/debtor_info.php:49
+msgid "City"
+msgstr "City"
+
+#: views/backend/debtors.php:53 views/collection/debtor_info.php:57
+#: views/collection/debtor_list.php:29 views/collection/debtor_list.php:62
+#: views/outsourcing/debtor_info.php:53 views/outsourcing/debtor_list.php:29
+#: views/outsourcing/debtor_list.php:63
+msgid "Country"
+msgstr "Country"
+
+#: views/backend/debtors.php:61 views/collection/debtor_info.php:33
+#: views/outsourcing/debtor_info.php:29
+msgid "Notes MM"
+msgstr "Notes MM"
+
+#: views/backend/footer.php:3 views/collection/footer.php:3
+#: views/outsourcing/footer.php:3
+msgid "Are you sure you want to proceed?"
+msgstr "Are you sure you want to proceed?"
+
+#: views/backend/footer.php:6 views/collection/footer.php:6
+#: views/outsourcing/footer.php:6
+msgid "Cancel"
+msgstr "Cancel"
+
+#: views/backend/footer.php:7 views/backend/upload.php:37
+#: views/collection/footer.php:7 views/outsourcing/footer.php:7
+msgid "Yes"
+msgstr "Yes"
+
+#: views/backend/index.php:35 views/backend/menu.php:11
+msgid "Upload data"
+msgstr "Upload data"
+
+#: views/backend/index.php:53
+msgid "Admins"
+msgstr "Admins"
+
+#: views/backend/index.php:62
+msgid "Latest Excel file"
+msgstr "Latest Excel file"
+
+#: views/backend/index.php:64
+msgid "was loaded on"
+msgstr "was loaded on"
+
+#: views/backend/login.php:14
+msgid "Log in to your administration panel"
+msgstr "Log in to your administration panel"
+
+#: views/backend/login.php:20 views/collection/login.php:20
+#: views/outsourcing/login.php:20
+msgid "User"
+msgstr "User"
+
+#: views/backend/login.php:24 views/backend/users.php:12
+#: views/collection/login.php:24 views/outsourcing/login.php:24
+msgid "Password"
+msgstr "Password"
+
+#: views/backend/login.php:33 views/collection/login.php:33
+#: views/outsourcing/login.php:33
+msgid "Language"
+msgstr "Language"
+
+#: views/backend/login.php:39
+msgid "Log in"
+msgstr "Log in"
+
+#: views/backend/upload.php:10
+msgid "Drop an Excel file to load (or click)"
+msgstr "Drop an Excel file to load (or click)"
+
+#: views/backend/upload.php:24
+msgid "File Type"
+msgstr "File type"
+
+#: views/backend/upload.php:31
+msgid "Override"
+msgstr "Overwrite"
+
+#: views/backend/upload.php:34
+msgid "No"
+msgstr "No"
+
+#: views/backend/upload.php:44
+msgid "Upload"
+msgstr "Upload"
+
+#: views/backend/upload.php:76
+msgid "The following file numbers were reopened:"
+msgstr "The following file numbers were reopened:"
+
+#: views/backend/upload.php:78
+msgid "The following file numbers are new:"
+msgstr "The following file numbers are new:"
+
+#: views/backend/upload.php:80
+msgid "The following file numbers belong to an inactive debtor:"
+msgstr "The following file numbers belong to an inactive debtor:"
+
+#: views/backend/upload_list.php:10
+msgid "File"
+msgstr "File"
+
+#: views/backend/upload_list.php:11
+msgid "Type"
+msgstr "Type"
+
+#: views/backend/users.php:8
+msgid "User Name"
+msgstr "Username"
+
+#: views/backend/users.php:16
+msgid "Choose a user role"
+msgstr "Choose a user role"
+
+#: views/backend/users.php:17
+msgid "Admin"
+msgstr "Admin"
+
+#: views/backend/users.php:18
+msgid "Viewer"
+msgstr "Viewer"
+
+#: views/backend/users.php:20 views/backend/users_list.php:10
+msgid "Role"
+msgstr "Role"
+
+#: views/backend/users.php:37
+msgid "Portals"
+msgstr "Portals"
+
+#: views/collection/admin_info.php:5 views/collection/debtor_info.php:9
+#: views/outsourcing/admin_info.php:5 views/outsourcing/debtor_info.php:5
+msgid "Number"
+msgstr "Number"
+
+#: views/collection/debtor_info.php:5
+msgid "File Number"
+msgstr "File number"
+
+#: views/collection/debtor_info.php:42 views/outsourcing/debtor_info.php:38
+msgid "Active"
+msgstr "Active"
+
+#: views/collection/debtor_info.php:42 views/outsourcing/debtor_info.php:38
+msgid "Inactive"
+msgstr "Inactive"
+
+#: views/collection/debtor_list.php:13 views/outsourcing/debtor_list.php:13
+msgid "Pending Debtors"
+msgstr "Pending debtors"
+
+#: views/collection/debtor_list.php:14 views/outsourcing/debtor_list.php:14
+msgid "Paid Debtors"
+msgstr "Debtors closed"
+
+#: views/collection/debtor_list.php:26 views/collection/debtor_list.php:59
+#: views/outsourcing/debtor_list.php:26 views/outsourcing/debtor_list.php:60
+msgid "Debtor #"
+msgstr "Debtor nr."
+
+#: views/collection/debtor_list.php:27 views/collection/debtor_list.php:60
+#: views/outsourcing/debtor_list.php:27 views/outsourcing/debtor_list.php:61
+msgid "Invoice Amt."
+msgstr "Invoice amt."
+
+#: views/collection/debtor_list.php:28 views/collection/debtor_list.php:61
+#: views/outsourcing/debtor_list.php:28 views/outsourcing/debtor_list.php:62
+msgid "Outstanding"
+msgstr "Outstanding"
+
+#: views/collection/footer.php:12 views/outsourcing/footer.php:12
+msgid "Need help? Send us an e-mail to"
+msgstr "Any questions? Feel free to send us an e-mail at"
+
+#: views/collection/graph.php:3 views/outsourcing/graph.php:2
+msgid "Overview outstanding invoices"
+msgstr "Overview outstanding invoices"
+
+#: views/collection/graph.php:17
+msgid "Paid Collection Agency"
+msgstr "Paid before submission"
+
+#: views/collection/graph.php:29
+msgid "Collection Charges"
+msgstr "Collection Charges"
+
+#: views/collection/graph.php:41
+msgid "Already Paid"
+msgstr "Paid"
+
+#: views/collection/graph.php:47
+msgid "Total Outstanding"
+msgstr "Total outstanding"
+
+#: views/collection/graph.php:66 views/outsourcing/graph.php:14
+msgid "Paid"
+msgstr "Paid"
+
+#: views/collection/index.php:11 views/collection/index.php:25
+#: views/outsourcing/index.php:11 views/outsourcing/index.php:25
+msgid "Pick a debtor"
+msgstr "Pick a debtor"
+
+#: views/collection/index.php:18 views/outsourcing/index.php:18
+msgid "Step by step instructions"
+msgstr "Step by step instructions"
+
+#: views/collection/index.php:24 views/outsourcing/index.php:24
+msgid ""
+"Choose a debtor from the list on the left of the screen by clicking on the "
+"button"
+msgstr ""
+"Choose a debtor from the list on the left side of your of the screen by "
+"clicking on the following button"
+
+#: views/collection/index.php:27 views/outsourcing/index.php:27
+msgid ""
+"You can also use the search bar on the top right of the screen to search for "
+"a debtor by name, number, invoice number, invoice amount, postal code, or "
+"location."
+msgstr ""
+"You can also use the search bar on the top right of the screen to search for "
+"a debtor by name, number, invoice number, invoice amount, postal code, or "
+"location."
+
+#: views/collection/index.php:35 views/outsourcing/index.php:35
+msgid "After clicking on the debtor of your choice, all of its data will load."
+msgstr ""
+"After clicking on the debtor of your choice, all of the debtors data will "
+"load."
+
+#: views/collection/index.php:36 views/outsourcing/index.php:36
+msgid ""
+"You may close or expand any of the sections where the data is grouped, and "
+"download the list of open and/or closed invoices."
+msgstr ""
+"You may close or expand any of the sections where the given data is grouped. "
+"You can also download lists of open and/or closed invoices including the "
+"notes."
+
+#: views/collection/index.php:44 views/outsourcing/index.php:44
+msgid ""
+"If you want to load another debtor, click on the button again and choose a "
+"different one."
+msgstr ""
+"If you want to load another debtor, click on the button again and choose the "
+"debtor of your choice."
+
+#: views/collection/index.php:52 views/outsourcing/index.php:52
+msgid "If you wish to see a list of paid debtors, click on the button bellow."
+msgstr ""
+"If you wish to see the list of paid debtors, click on the button below."
+
+#: views/collection/index.php:53 views/outsourcing/index.php:53
+msgid "Paid debtors"
+msgstr "Debtors closed"
+
+#: views/collection/index.php:61 views/outsourcing/index.php:61
+msgid ""
+"If you have any further questions or need help, please send us an email to"
+msgstr ""
+"If you have any further questions or need help, please send an email at"
+
+#: views/collection/index.php:73 views/outsourcing/index.php:73
+msgid "Company information"
+msgstr "Company information"
+
+#: views/collection/index.php:83 views/outsourcing/index.php:83
+msgid "Debtor details"
+msgstr "Debtor details"
+
+#: views/collection/index.php:93
+msgid "Main overview"
+msgstr "Main overview"
+
+#: views/collection/index.php:101 views/outsourcing/index.php:101
+msgid "Closed invoices"
+msgstr "Closed invoices"
+
+#: views/collection/invoice_closed_info.php:1
+#: views/collection/invoice_info.php:1
+#: views/outsourcing/invoice_closed_info.php:1
+#: views/outsourcing/invoice_info.php:1
+msgid "Download"
+msgstr "Excel"
+
+#: views/collection/invoice_closed_info.php:2
+#: views/collection/invoice_info.php:2
+#: views/outsourcing/invoice_closed_info.php:2
+#: views/outsourcing/invoice_info.php:2
+msgid "Click on an invoice to see it's notes"
+msgstr "Click on an invoice to see its notes"
+
+#: views/collection/invoice_closed_info.php:45
+#: views/collection/invoice_info.php:51
+#: views/outsourcing/invoice_closed_info.php:45
+#: views/outsourcing/invoice_info.php:50
+msgid "There are no notes for this invoice"
+msgstr "There are no notes for this invoice"
+
+#: views/collection/invoice_info.php:9
+#: views/outsourcing/invoice_closed_info.php:10
+#: views/outsourcing/invoice_info.php:9
+msgid "Exp."
+msgstr "Exp."
+
+#: views/collection/invoice_info.php:11
+msgid "Total Open"
+msgstr "Total open (incl. I&C)"
+
+#: views/collection/login.php:14
+msgid "Log in to your collection panel"
+msgstr "Log in to your collection panel"
+
+#: views/outsourcing/admin_info.php:33
+msgid "Account"
+msgstr "Account"
+
+#: views/outsourcing/index.php:93
+msgid "Open Invoices"
+msgstr "Open invoices"
+
+#: views/outsourcing/invoice_closed_info.php:9
+msgid "Pay Date"
+msgstr "Payment date"
+
+#: views/outsourcing/invoice_info.php:11
+msgid "Open Amt."
+msgstr "Open amt."
+
+#: views/outsourcing/invoice_info.php:12
+msgid "Adm. Costs"
+msgstr "Adm. costs"
+
+#: views/outsourcing/invoice_info.php:13
+msgid "Paid Amt."
+msgstr "Paid amt."
+
+#: views/outsourcing/login.php:14
+msgid "Log in to your personal panel"
+msgstr "Log in to your personal panel"
+
+#~ msgid "Need hep? Send us an email to"
+#~ msgstr "Hulp nodig? Stuur een e-mail naar"
+
+#~ msgid "Debtor:"
+#~ msgstr "Debiteur:"

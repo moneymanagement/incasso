@@ -1,0 +1,58 @@
+﻿@model Incasso.Users.Dto.UserListViewModel
+@{
+    Layout = null;
+}
+
+<script>
+     var defaultPageOptions = {   RequestedPage:@Model.RequestedPage, PageSize:@Model.PageSize};
+</script>
+
+
+<ul class="pagination center">
+    @if (Math.Ceiling((double)(Model.Users.TotalCount / Model.PageSize)) > 1)
+    {
+        <li class="waves-effect chevron @(Model.RequestedPage==0?"disabled":"")" data-page="-1"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        for (int i = 0; i < Math.Ceiling((double)(Model.Users.TotalCount / Model.PageSize)); i++)
+        {
+            if (i == 0)
+            {
+                <li class=" pageli waves-effect @(i==Model.RequestedPage?"active main-green":"") " data-page="@i"><a href="#!">@(i + 1)</a></li>
+            }
+            else 
+            {
+                <li class="pageli waves-effect @(i==Model.RequestedPage?"active main-green":"") " data-page="@(i)"><a href="#!">@(i + 1)</a></li>
+            }
+        }
+        <li class="waves-effect chevron @(Model.RequestedPage+1==Math.Ceiling((double)(Model.Users.TotalCount / Model.PageSize))?"disabled":"")" data-page="1"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+    }
+</ul>
+<div class="input-field">
+    <i class="material-icons prefix tiny">search</i>
+    <input type="text" id="tablesearch" placeholder="@L("Search")" value="@Model.Search">
+</div>
+<table class="responsive-table highlight bordered" id="table-list">
+    <thead>
+        <tr>
+            <th>@L("Name")</th>
+            <th>@L("Role")</th>
+            <th>@L("Administrations")</th>
+            <th width="90px"></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model.Users.Items)
+            {
+            <tr>
+                <td>@item.UserName</td>
+                <td>@item.Role</td>
+                <td>@item.AdministratorsList</td>
+                <td>
+                    <a href="#anchor" class="waves-effect waves-light grey-text text-darken-1 btn_edit" data-id="@item.Id"><i class="material-icons">edit</i></a>
+                    <a href="#anchor" class="waves-effect waves-light grey-text text-darken-1 btn_delete" data-id="@item.Id"><i class="material-icons">delete</i></a>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table> 

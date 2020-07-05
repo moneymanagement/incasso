@@ -1,0 +1,131 @@
+﻿@using Abp.Web.Mvc.Extensions
+@model Incasso.Web.Models.Account.LoginFormViewModel
+@{
+    SetAntiForgeryCookie();
+}
+
+@*@section Styles
+    {
+        @Html.IncludeStyle("~/Views/Account/Login.css")
+    }
+    @section Scripts
+    {
+        @Html.IncludeScript("~/Views/Account/Login.js")
+    }*@
+<nav class="black white-text">
+    <div class="nav-wrapper container">
+        <a href="?home" class="brand-logo"><img src="~/Images/logo-small.png" class="responsive-img" /></a>
+    </div>
+</nav>
+<div class="section container">
+    <div class="card-panel z-depth-0" style="background:transparent">
+        <div class="row">
+            <div class="col s12">
+                <form id="form_login"   method="POST" asp-action="Login">
+                    <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+                    <input type="hidden" name="returnUrlHash" />
+                    <div class="container section">
+                        <div class="row">
+                            <div class="col s12 center semibold">
+                               @L("LoginTitle") 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="user" name="UsernameOrEmailAddress" type="text" class="validate">
+                                <label for="user">@L("UserName")</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="password" name="Password" type="password" class="validate">
+                                <label for="password">@L("Password")</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <select class="icons" name="Language" id="language">
+                                    <option value="nl-NL" data-icon="/Images/nl.png" class="left circle">Nederlands</option>
+                                    <option value="en-US" data-icon="/Images/uk.jpg" class="left circle">English</option>
+
+
+
+
+                                </select>
+                                <label>@L("Language")</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 center">
+                            <a class="btn waves waves-light black" id="btn_submit"><i class="material-icons left">vpn_key</i> @L("LogIn")</a>
+                        </div>
+                    </div>
+                    @if (Model.IsSelfRegistrationAllowed)
+            {
+                        <div class="row m-t-15 m-b--20">
+                            <div class="col-xs-12">
+                                @*<a href="@Url.Action("Register", "Account")">@L("Register")</a>*@
+                            </div>
+                        </div>
+                    }
+                    <div class="row">
+                        <div class="col s12 center">
+                            <div class="preloader-wrapper big active" style="display:none;">
+                                <div class="spinner-layer spinner-green-only">
+                                    <div class="circle-clipper left">
+                                        <div class="circle"></div>
+                                    </div><div class="gap-patch">
+                                        <div class="circle"></div>
+                                    </div><div class="circle-clipper right">
+                                        <div class="circle"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@*<div class="card">
+        <div class="body">
+            <form id="LoginForm" method="POST" asp-action="Login">
+                <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+                <input type="hidden" name="returnUrlHash" />
+                <h4 class="text-center">@L("LogIn")</h4>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="material-icons">person</i>
+                    </span>
+                    <div class="form-line">
+                        <input type="text" class="form-control" name="UsernameOrEmailAddress" placeholder="@L("UserNameOrEmail")" required autofocus maxlength="100">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="material-icons">lock</i>
+                    </span>
+                    <div class="form-line">
+                        <input type="password" class="form-control" name="Password" placeholder="@L("Password")" required maxlength="100">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8 p-t-5">
+                        <input type="checkbox" name="RememberMe" id="rememberme" class="filled-in chk-col-pink" value="true">
+                        <label for="rememberme">@L("RememberMe")</label>
+                    </div>
+                    <div class="col-xs-4">
+                        <button id="LoginButton" class="btn btn-block bg-pink waves-effect" type="submit">@L("LogIn")</button>
+                    </div>
+                </div>
+                @if (Model.IsSelfRegistrationAllowed)
+                {
+                    <div class="row m-t-15 m-b--20">
+                        <div class="col-xs-12">
+                            <a href="@Url.Action("Register", "Account")">@L("Register")</a>
+                        </div>
+                    </div>
+                }
+            </form>
+        </div>
+    </div>*@

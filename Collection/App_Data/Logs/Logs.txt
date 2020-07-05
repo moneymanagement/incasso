@@ -1,0 +1,180 @@
+DEBUG 2020-01-13 07:24:24,008 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:24:24,316 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:24:24,317 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:24:24,317 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:24:24,317 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Incasso.incassoCoreModule, incasso.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:24:24,317 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Incasso.incassoApplicationModule, incasso.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:24:24,318 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:24:24,318 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Incasso.Api.incassoWebApiModule, incasso.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:24:24,318 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:24:24,318 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:24:24,318 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:24:24,318 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:24:24,318 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:24:24,322 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2020-01-13 07:24:24,646 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-01-13 07:24:24,646 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-01-13 07:24:24,646 [1    ] o.Configuration.LanguageManagementConfig - Converted incasso (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-01-13 07:24:24,646 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-01-13 07:24:25,201 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Incasso.EntityFramework.IncassoDbContext, incasso.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:24:31,458 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-01-13 07:24:31,556 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-01-13 07:24:31,578 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-01-13 07:24:31,597 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: incasso
+DEBUG 2020-01-13 07:24:31,611 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-01-13 07:24:31,795 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2020-01-13 07:24:31,930 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 27 classes define auto mapping attributes
+DEBUG 2020-01-13 07:24:31,930 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-01-13 07:24:31,947 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-01-13 07:24:31,948 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Users.Dto.CreateUserDto
+DEBUG 2020-01-13 07:24:31,949 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Users.Dto.UpdateUserDto
+DEBUG 2020-01-13 07:24:31,949 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Users.Dto.UserDto
+DEBUG 2020-01-13 07:24:31,949 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Roles.Dto.CreateRoleDto
+DEBUG 2020-01-13 07:24:31,949 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Roles.Dto.PermissionDto
+DEBUG 2020-01-13 07:24:31,949 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Roles.Dto.RoleDto
+DEBUG 2020-01-13 07:24:31,950 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Administrators.dto.CreateAdministratorInput
+DEBUG 2020-01-13 07:24:31,951 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Upload.Dto.UploadDto
+DEBUG 2020-01-13 07:24:31,951 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Upload.Dto.CreateUploadInput
+DEBUG 2020-01-13 07:24:31,951 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Upload.Dto.EditUploadDto
+DEBUG 2020-01-13 07:24:31,952 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.MultiTenancy.Dto.CreateInvoiceDto
+DEBUG 2020-01-13 07:24:31,957 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.MultiTenancy.Dto.InvoiceDto
+DEBUG 2020-01-13 07:24:31,959 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.MultiTenancy.Dto.EditInvoiceDto
+DEBUG 2020-01-13 07:24:31,961 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.MultiTenancy.Dto.EditAdministratorDto
+DEBUG 2020-01-13 07:24:31,961 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.MultiTenancy.Dto.CreateDebtorDto
+DEBUG 2020-01-13 07:24:31,961 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.MultiTenancy.Dto.EditDebtorDto
+DEBUG 2020-01-13 07:24:31,961 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.MultiTenancy.Dto.DebtorDto
+DEBUG 2020-01-13 07:24:31,963 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-01-13 07:24:31,963 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.MultiTenancy.Dto.EditTenantDto
+DEBUG 2020-01-13 07:24:31,963 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.MultiTenancy.Dto.TenantDto
+DEBUG 2020-01-13 07:24:31,963 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - incasso.Users.Dto.UsersAdministratorsDto
+DEBUG 2020-01-13 07:24:31,963 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - incasso.Administrators.dto.UpdateAdministratorDto
+DEBUG 2020-01-13 07:24:31,963 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - incasso.Administrators.dto.AdministratorDto
+DEBUG 2020-01-13 07:24:31,964 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Collection.Web.Models.Account.TenantChangeViewModel
+DEBUG 2020-01-13 07:24:31,964 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Collection.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2020-01-13 07:24:38,474 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Incasso.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2020-01-13 07:24:38,477 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Incasso.Users.IUsersAppService' with service name 'app/users'.
+DEBUG 2020-01-13 07:24:38,479 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Incasso.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2020-01-13 07:24:38,482 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Incasso.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2020-01-13 07:24:38,495 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Incasso.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2020-01-13 07:24:38,498 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Incasso.Upload.IUploadDataAppService' with service name 'app/UploadData'.
+DEBUG 2020-01-13 07:24:38,507 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Incasso.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2020-01-13 07:24:38,510 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Incasso.Administrator.IAdministrationsAppService' with service name 'app/Administrations'.
+DEBUG 2020-01-13 07:24:38,512 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Incasso.Administrator.IDebtorsAppService' with service name 'app/Debtors'.
+DEBUG 2020-01-13 07:24:38,514 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Incasso.Administrator.IInvoicesAppService' with service name 'app/Invoices'.
+WARN  2020-01-13 07:24:49,717 [11   ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+DEBUG 2020-01-13 07:44:50,883 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-01-13 07:44:52,214 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2020-01-13 07:44:52,230 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Collection.Web.incassoWebModule, incasso.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:44:52,233 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Incasso.incassoDataModule, incasso.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:44:52,234 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:44:52,234 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:44:52,234 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:44:52,234 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:44:52,235 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:44:52,235 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:44:52,236 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Incasso.incassoCoreModule, incasso.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:44:52,236 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Incasso.incassoApplicationModule, incasso.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:44:52,236 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:44:52,237 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Incasso.Api.incassoWebApiModule, incasso.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:44:52,237 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:44:52,237 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:44:52,238 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:44:52,238 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:44:52,238 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:44:52,245 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2020-01-13 07:44:53,495 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-01-13 07:44:53,495 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-01-13 07:44:53,495 [1    ] o.Configuration.LanguageManagementConfig - Converted incasso (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-01-13 07:44:53,495 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-01-13 07:44:54,742 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Incasso.EntityFramework.IncassoDbContext, incasso.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-13 07:44:56,586 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-01-13 07:44:56,696 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-01-13 07:44:56,724 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-01-13 07:44:56,742 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: incasso
+DEBUG 2020-01-13 07:44:56,755 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-01-13 07:44:56,958 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2020-01-13 07:44:57,093 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 27 classes define auto mapping attributes
+DEBUG 2020-01-13 07:44:57,093 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-01-13 07:44:57,106 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-01-13 07:44:57,107 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Users.Dto.CreateUserDto
+DEBUG 2020-01-13 07:44:57,108 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Users.Dto.UpdateUserDto
+DEBUG 2020-01-13 07:44:57,108 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Users.Dto.UserDto
+DEBUG 2020-01-13 07:44:57,108 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Roles.Dto.CreateRoleDto
+DEBUG 2020-01-13 07:44:57,109 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Roles.Dto.PermissionDto
+DEBUG 2020-01-13 07:44:57,109 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Roles.Dto.RoleDto
+DEBUG 2020-01-13 07:44:57,110 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Administrators.dto.CreateAdministratorInput
+DEBUG 2020-01-13 07:44:57,110 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Upload.Dto.UploadDto
+DEBUG 2020-01-13 07:44:57,110 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Upload.Dto.CreateUploadInput
+DEBUG 2020-01-13 07:44:57,110 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.Upload.Dto.EditUploadDto
+DEBUG 2020-01-13 07:44:57,111 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.MultiTenancy.Dto.CreateInvoiceDto
+DEBUG 2020-01-13 07:44:57,111 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.MultiTenancy.Dto.InvoiceDto
+DEBUG 2020-01-13 07:44:57,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.MultiTenancy.Dto.EditInvoiceDto
+DEBUG 2020-01-13 07:44:57,113 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.MultiTenancy.Dto.EditAdministratorDto
+DEBUG 2020-01-13 07:44:57,113 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.MultiTenancy.Dto.CreateDebtorDto
+DEBUG 2020-01-13 07:44:57,113 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.MultiTenancy.Dto.EditDebtorDto
+DEBUG 2020-01-13 07:44:57,114 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.MultiTenancy.Dto.DebtorDto
+DEBUG 2020-01-13 07:44:57,115 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-01-13 07:44:57,115 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.MultiTenancy.Dto.EditTenantDto
+DEBUG 2020-01-13 07:44:57,115 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Incasso.MultiTenancy.Dto.TenantDto
+DEBUG 2020-01-13 07:44:57,115 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - incasso.Users.Dto.UsersAdministratorsDto
+DEBUG 2020-01-13 07:44:57,116 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - incasso.Administrators.dto.UpdateAdministratorDto
+DEBUG 2020-01-13 07:44:57,116 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - incasso.Administrators.dto.AdministratorDto
+DEBUG 2020-01-13 07:44:57,116 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Collection.Web.Models.Account.TenantChangeViewModel
+DEBUG 2020-01-13 07:44:57,116 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Collection.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2020-01-13 07:45:02,008 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Incasso.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2020-01-13 07:45:02,010 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Incasso.Users.IUsersAppService' with service name 'app/users'.
+DEBUG 2020-01-13 07:45:02,016 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Incasso.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2020-01-13 07:45:02,027 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Incasso.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2020-01-13 07:45:02,030 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Incasso.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2020-01-13 07:45:02,032 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Incasso.Upload.IUploadDataAppService' with service name 'app/UploadData'.
+DEBUG 2020-01-13 07:45:02,034 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Incasso.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2020-01-13 07:45:02,037 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Incasso.Administrator.IAdministrationsAppService' with service name 'app/Administrations'.
+DEBUG 2020-01-13 07:45:02,040 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Incasso.Administrator.IDebtorsAppService' with service name 'app/Debtors'.
+DEBUG 2020-01-13 07:45:02,042 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Incasso.Administrator.IInvoicesAppService' with service name 'app/Invoices'.

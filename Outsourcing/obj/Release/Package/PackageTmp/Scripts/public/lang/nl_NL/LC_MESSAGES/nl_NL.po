@@ -1,0 +1,737 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2018-03-06 22:38-0400\n"
+"PO-Revision-Date: 2018-04-03 17:37-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.4\n"
+"X-Poedit-Basepath: ../../../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _\n"
+"X-Poedit-SearchPath-0: public/lang/nl_NL/LC_MESSAGES\n"
+"X-Poedit-SearchPath-1: app\n"
+
+#: app/controllers/backend/AdministrationsController.class.php:11
+#: app/controllers/backend/AdministrationsController.class.php:12
+#: app/views/backend/index.php:17 app/views/backend/index.php:54
+#: app/views/backend/menu.php:9 app/views/backend/upload.php:15
+#: app/views/backend/users.php:25 app/views/backend/users_list.php:11
+msgid "Administrations"
+msgstr "Administraties"
+
+#: app/controllers/backend/DebtorsController.class.php:8
+#: app/controllers/backend/DebtorsController.class.php:9
+#: app/views/backend/index.php:26 app/views/backend/menu.php:10
+msgid "Debtors"
+msgstr "Debiteuren"
+
+#: app/controllers/backend/IndexController.class.php:20
+#: app/controllers/backend/IndexController.class.php:21
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: app/controllers/backend/LoginController.class.php:6
+#: app/controllers/collection/LoginController.class.php:6
+#: app/controllers/outsourcing/LoginController.class.php:6
+#: app/views/collection/login.php:39 app/views/outsourcing/login.php:39
+msgid "Log In"
+msgstr "Inloggen"
+
+#: app/controllers/backend/UploadController.class.php:8
+#: app/controllers/backend/UploadController.class.php:9
+msgid "Upload Data"
+msgstr "Upload data"
+
+#: app/controllers/backend/UsersController.class.php:8
+#: app/controllers/backend/UsersController.class.php:9
+#: app/views/backend/index.php:8 app/views/backend/menu.php:8
+msgid "Users"
+msgstr "Gebruikers"
+
+#: app/controllers/collection/IndexController.class.php:6
+#: app/models/collection/InvoiceModel.class.php:109
+#: app/models/collection/InvoiceModel.class.php:215
+#: app/views/backend/upload.php:28 app/views/backend/users.php:40
+#: app/views/collection/header.php:22
+msgid "Collection"
+msgstr "Incasso"
+
+#: app/controllers/collection/IndexController.class.php:7
+#: app/controllers/outsourcing/IndexController.class.php:7
+#: app/views/backend/index.php:45
+msgid "Overview"
+msgstr "Overzicht"
+
+#: app/controllers/outsourcing/IndexController.class.php:6
+#: app/models/outsourcing/InvoiceModel.class.php:39
+#: app/models/outsourcing/InvoiceModel.class.php:143
+#: app/views/backend/upload.php:26 app/views/backend/users.php:44
+msgid "Outsourcing"
+msgstr "Outsourcing"
+
+#: app/models/collection/InvoiceModel.class.php:114
+#: app/models/collection/InvoiceModel.class.php:162
+#: app/models/outsourcing/InvoiceModel.class.php:44
+#: app/models/outsourcing/InvoiceModel.class.php:91
+msgid "Invoice #"
+msgstr "Factuurnr."
+
+#: app/models/collection/InvoiceModel.class.php:115
+#: app/models/collection/InvoiceModel.class.php:163
+#: app/models/outsourcing/InvoiceModel.class.php:45
+#: app/models/outsourcing/InvoiceModel.class.php:92
+#: app/views/backend/upload_list.php:9
+#: app/views/collection/invoice_closed_info.php:7
+#: app/views/collection/invoice_info.php:7
+#: app/views/outsourcing/invoice_closed_info.php:7
+#: app/views/outsourcing/invoice_info.php:7
+msgid "Date"
+msgstr "Factuurdatum"
+
+#: app/models/collection/InvoiceModel.class.php:116
+#: app/models/collection/InvoiceModel.class.php:164
+#: app/models/outsourcing/InvoiceModel.class.php:46
+#: app/models/outsourcing/InvoiceModel.class.php:93
+#: app/views/collection/invoice_closed_info.php:8
+#: app/views/collection/invoice_info.php:8
+#: app/views/outsourcing/invoice_closed_info.php:8
+#: app/views/outsourcing/invoice_info.php:8
+msgid "Due Date"
+msgstr "Vervaldatum"
+
+#: app/models/collection/InvoiceModel.class.php:117
+#: app/models/collection/InvoiceModel.class.php:167
+#: app/models/outsourcing/InvoiceModel.class.php:48
+#: app/models/outsourcing/InvoiceModel.class.php:96
+msgid "Amount"
+msgstr "Fact. bedrag"
+
+#: app/models/collection/InvoiceModel.class.php:118
+#: app/models/outsourcing/InvoiceModel.class.php:50
+msgid "Open Amount"
+msgstr "Bedrag open"
+
+#: app/models/collection/InvoiceModel.class.php:119
+#: app/views/collection/graph.php:23
+msgid "Interest"
+msgstr "Rente"
+
+#: app/models/collection/InvoiceModel.class.php:120
+msgid "Collection Costs"
+msgstr "Incassokosten"
+
+#: app/models/collection/InvoiceModel.class.php:121
+#: app/views/collection/invoice_info.php:12
+msgid "Paid MM"
+msgstr "Betaald MM"
+
+#: app/models/collection/InvoiceModel.class.php:122
+#: app/views/collection/invoice_info.php:13
+msgid "Paid Client"
+msgstr "Betaald cliënt"
+
+#: app/models/collection/InvoiceModel.class.php:123
+msgid "Total Payment"
+msgstr "Totaal betaald"
+
+#: app/models/collection/InvoiceModel.class.php:124
+#: app/views/collection/debtor_info.php:41
+#: app/views/collection/invoice_info.php:14
+#: app/views/outsourcing/debtor_info.php:37
+msgid "Status"
+msgstr "Status"
+
+#: app/models/collection/InvoiceModel.class.php:125
+#: app/models/collection/InvoiceModel.class.php:168
+#: app/models/outsourcing/InvoiceModel.class.php:53
+#: app/models/outsourcing/InvoiceModel.class.php:97
+#: app/views/backend/debtors.php:57 app/views/collection/debtor_info.php:65
+#: app/views/outsourcing/debtor_info.php:61
+msgid "Notes"
+msgstr "Notities"
+
+#: app/models/collection/InvoiceModel.class.php:143
+#: app/models/collection/InvoiceModel.class.php:189
+#: app/models/outsourcing/InvoiceModel.class.php:74
+#: app/models/outsourcing/InvoiceModel.class.php:118
+#: app/views/collection/debtor_list.php:25
+#: app/views/collection/debtor_list.php:58
+#: app/views/outsourcing/debtor_list.php:25
+#: app/views/outsourcing/debtor_list.php:59
+msgid "Debtor"
+msgstr "Debiteur"
+
+#: app/models/collection/InvoiceModel.class.php:165
+#: app/models/outsourcing/InvoiceModel.class.php:94
+#: app/views/collection/invoice_closed_info.php:9
+msgid "Payment Date"
+msgstr "Betaaldatum"
+
+#: app/models/collection/InvoiceModel.class.php:166
+#: app/models/outsourcing/InvoiceModel.class.php:47
+#: app/models/outsourcing/InvoiceModel.class.php:95
+#: app/views/collection/invoice_closed_info.php:10
+msgid "Expired"
+msgstr "Vervallen"
+
+#: app/models/collection/InvoiceModel.class.php:215
+#: app/models/outsourcing/InvoiceModel.class.php:143
+#: app/views/collection/graph.php:64 app/views/outsourcing/graph.php:12
+msgid "Open"
+msgstr "Openstaand"
+
+#: app/models/collection/InvoiceModel.class.php:215
+#: app/models/outsourcing/InvoiceModel.class.php:143
+msgid "Closed"
+msgstr "Gesloten"
+
+#: app/models/collection/InvoiceModel.class.php:215
+#: app/models/outsourcing/InvoiceModel.class.php:143
+msgid "Invoices"
+msgstr "Hoofdsom"
+
+#: app/models/outsourcing/InvoiceModel.class.php:49
+#: app/views/collection/graph.php:35
+msgid "Administration Costs"
+msgstr "Administratiekosten"
+
+#: app/models/outsourcing/InvoiceModel.class.php:51
+msgid "Paid Amount"
+msgstr "Bedrag betaald"
+
+#: app/models/outsourcing/InvoiceModel.class.php:52
+#: app/views/outsourcing/invoice_info.php:14
+msgid "Dispute"
+msgstr "Dispuut"
+
+#: app/views/backend/administrations.php:8
+#: app/views/backend/administrations_list.php:9
+#: app/views/backend/debtors.php:17 app/views/backend/debtors_list.php:11
+#: app/views/backend/users_list.php:9 app/views/collection/admin_info.php:9
+#: app/views/collection/debtor_info.php:13
+#: app/views/outsourcing/admin_info.php:9
+#: app/views/outsourcing/debtor_info.php:9
+msgid "Name"
+msgstr "Naam"
+
+#: app/views/backend/administrations.php:12
+#: app/views/backend/administrations_list.php:10
+msgid "Administration number"
+msgstr "Administratienummer"
+
+#: app/views/backend/administrations.php:16 app/views/backend/debtors.php:25
+#: app/views/collection/admin_info.php:13
+#: app/views/collection/debtor_info.php:17
+#: app/views/outsourcing/admin_info.php:13
+#: app/views/outsourcing/debtor_info.php:13
+msgid "Contact person"
+msgstr "Contactpersoon"
+
+#: app/views/backend/administrations.php:20 app/views/backend/debtors.php:29
+#: app/views/collection/admin_info.php:21
+#: app/views/collection/debtor_info.php:29
+#: app/views/outsourcing/admin_info.php:21
+#: app/views/outsourcing/debtor_info.php:25
+msgid "E-mail"
+msgstr "E-mail"
+
+#: app/views/backend/administrations.php:24 app/views/backend/debtors.php:33
+#: app/views/collection/admin_info.php:17
+#: app/views/collection/debtor_info.php:21
+#: app/views/outsourcing/admin_info.php:17
+#: app/views/outsourcing/debtor_info.php:17
+msgid "Phone number"
+msgstr "Telefoonnummer"
+
+#: app/views/backend/administrations.php:28 app/views/backend/debtors.php:37
+#: app/views/collection/debtor_info.php:25
+#: app/views/outsourcing/debtor_info.php:21
+msgid "Mobile"
+msgstr "Mobiel"
+
+#: app/views/backend/administrations.php:32
+#: app/views/collection/admin_info.php:29
+#: app/views/outsourcing/admin_info.php:29
+msgid "Bank"
+msgstr "Bank"
+
+#: app/views/backend/administrations.php:36
+#: app/views/collection/admin_info.php:33
+msgid "Account nr."
+msgstr "Bankrekening"
+
+#: app/views/backend/administrations.php:40
+#: app/views/collection/admin_info.php:37
+#: app/views/outsourcing/admin_info.php:37
+msgid "IBAN"
+msgstr "IBAN"
+
+#: app/views/backend/administrations.php:44
+#: app/views/collection/admin_info.php:41
+#: app/views/outsourcing/admin_info.php:41
+msgid "BIC"
+msgstr "BIC"
+
+#: app/views/backend/administrations.php:47 app/views/backend/index.php:52
+msgid "View users"
+msgstr "View gebruikers"
+
+#: app/views/backend/administrations.php:60 app/views/backend/debtors.php:66
+#: app/views/backend/users.php:50
+msgid "Save"
+msgstr "Opslaan"
+
+#: app/views/backend/administrations.php:78 app/views/backend/debtors.php:84
+#: app/views/backend/upload.php:61 app/views/backend/users.php:68
+msgid "Data was saved successfully!"
+msgstr "Data is succesvol opgeslagen!"
+
+#: app/views/backend/administrations.php:85 app/views/backend/debtors.php:91
+#: app/views/backend/upload.php:68
+msgid "Something went wrong!"
+msgstr "Er is iets fout gegaan!"
+
+#: app/views/backend/administrations_list.php:3
+#: app/views/backend/debtors_list.php:3 app/views/backend/upload_list.php:3
+#: app/views/backend/users_list.php:3 app/views/collection/debtor_list.php:10
+#: app/views/collection/menu.php:9 app/views/outsourcing/debtor_list.php:10
+#: app/views/outsourcing/menu.php:9
+msgid "Search terms..."
+msgstr "Zoektermen..."
+
+#: app/views/backend/debtors.php:8
+msgid "Choose an administration"
+msgstr "Kies een administratie"
+
+#: app/views/backend/debtors.php:13 app/views/backend/debtors_list.php:9
+msgid "Administration"
+msgstr "Administratie"
+
+#: app/views/backend/debtors.php:21 app/views/backend/debtors_list.php:10
+msgid "Debtor number"
+msgstr "Debiteurnummer"
+
+#: app/views/backend/debtors.php:41 app/views/collection/debtor_info.php:45
+#: app/views/outsourcing/debtor_info.php:41
+msgid "Address"
+msgstr "Adres"
+
+#: app/views/backend/debtors.php:45 app/views/collection/debtor_info.php:49
+#: app/views/outsourcing/debtor_info.php:45
+msgid "Postal code"
+msgstr "Postcode"
+
+#: app/views/backend/debtors.php:49 app/views/collection/debtor_info.php:53
+#: app/views/outsourcing/debtor_info.php:49
+msgid "City"
+msgstr "Stad"
+
+#: app/views/backend/debtors.php:53 app/views/collection/debtor_info.php:57
+#: app/views/collection/debtor_list.php:29
+#: app/views/collection/debtor_list.php:62
+#: app/views/outsourcing/debtor_info.php:53
+#: app/views/outsourcing/debtor_list.php:29
+#: app/views/outsourcing/debtor_list.php:63
+msgid "Country"
+msgstr "Land"
+
+#: app/views/backend/debtors.php:61 app/views/collection/debtor_info.php:33
+#: app/views/outsourcing/debtor_info.php:29
+msgid "Notes MM"
+msgstr "Notities MM"
+
+#: app/views/backend/footer.php:3 app/views/collection/footer.php:3
+#: app/views/outsourcing/footer.php:3
+msgid "Are you sure you want to proceed?"
+msgstr "Weet u zeker dat u door wilt gaan?"
+
+#: app/views/backend/footer.php:6 app/views/collection/footer.php:6
+#: app/views/outsourcing/footer.php:6
+msgid "Cancel"
+msgstr "Annuleer"
+
+#: app/views/backend/footer.php:7 app/views/backend/upload.php:37
+#: app/views/collection/footer.php:7 app/views/outsourcing/footer.php:7
+msgid "Yes"
+msgstr "Ja"
+
+#: app/views/backend/index.php:35 app/views/backend/menu.php:11
+msgid "Upload data"
+msgstr "Upload data"
+
+#: app/views/backend/index.php:53
+msgid "Admins"
+msgstr "Admins"
+
+#: app/views/backend/index.php:62
+msgid "Latest Excel file"
+msgstr "Laatste Excel bestand"
+
+#: app/views/backend/index.php:64
+msgid "was loaded on"
+msgstr "is ingeladen op"
+
+#: app/views/backend/login.php:14
+msgid "Log in to your administration panel"
+msgstr "Log in op uw beheerdersomgeving"
+
+#: app/views/backend/login.php:20 app/views/collection/login.php:20
+#: app/views/outsourcing/login.php:20
+msgid "User"
+msgstr "Gebruikersnaam"
+
+#: app/views/backend/login.php:24 app/views/backend/users.php:12
+#: app/views/collection/login.php:24 app/views/outsourcing/login.php:24
+msgid "Password"
+msgstr "Wachtwoord"
+
+#: app/views/backend/login.php:33 app/views/collection/login.php:33
+#: app/views/outsourcing/login.php:33
+msgid "Language"
+msgstr "Taal"
+
+#: app/views/backend/login.php:39
+msgid "Log in"
+msgstr "Inloggen"
+
+#: app/views/backend/upload.php:10
+msgid "Drop an Excel file to load (or click)"
+msgstr "Sleep een Excel bestand naar dit veld om deze te laden (of klik)"
+
+#: app/views/backend/upload.php:24
+msgid "File Type"
+msgstr "Bestandstype"
+
+#: app/views/backend/upload.php:31
+msgid "Override"
+msgstr "Overschrijven"
+
+#: app/views/backend/upload.php:34
+msgid "No"
+msgstr "Nee"
+
+#: app/views/backend/upload.php:44
+msgid "Upload"
+msgstr "Uploaden"
+
+#: app/views/backend/upload.php:76
+msgid "The following file numbers were reopened:"
+msgstr "De volgende nummers in het bestand worden heropend:"
+
+#: app/views/backend/upload.php:78
+msgid "The following file numbers are new:"
+msgstr "De volgende nummers in het bestand zijn nieuw:"
+
+#: app/views/backend/upload.php:80
+msgid "The following file numbers belong to an inactive debtor:"
+msgstr "De volgende nummers in het bestand behoren tot een inactieve debiteur:"
+
+#: app/views/backend/upload_list.php:10
+msgid "File"
+msgstr "Bestand"
+
+#: app/views/backend/upload_list.php:11
+msgid "Type"
+msgstr "Type"
+
+#: app/views/backend/users.php:8
+msgid "User Name"
+msgstr "Gebruikersnaam"
+
+#: app/views/backend/users.php:16
+msgid "Choose a user role"
+msgstr "Kies een gebruikersrol"
+
+#: app/views/backend/users.php:17
+msgid "Admin"
+msgstr "Admin"
+
+#: app/views/backend/users.php:18
+msgid "Viewer"
+msgstr "Viewer"
+
+#: app/views/backend/users.php:20 app/views/backend/users_list.php:10
+msgid "Role"
+msgstr "Rol"
+
+#: app/views/backend/users.php:37
+msgid "Portals"
+msgstr "Portalen"
+
+#: app/views/collection/admin_info.php:5 app/views/collection/debtor_info.php:9
+#: app/views/outsourcing/admin_info.php:5
+#: app/views/outsourcing/debtor_info.php:5
+msgid "Number"
+msgstr "Nummer"
+
+#: app/views/collection/debtor_info.php:5
+msgid "File Number"
+msgstr "Dossiernummer"
+
+#: app/views/collection/debtor_info.php:42
+#: app/views/outsourcing/debtor_info.php:38
+msgid "Active"
+msgstr "Actief"
+
+#: app/views/collection/debtor_info.php:42
+#: app/views/outsourcing/debtor_info.php:38
+msgid "Inactive"
+msgstr "Inactief"
+
+#: app/views/collection/debtor_list.php:13
+#: app/views/outsourcing/debtor_list.php:13
+msgid "Pending Debtors"
+msgstr "Debiteuren open"
+
+#: app/views/collection/debtor_list.php:14 app/views/collection/index.php:53
+#: app/views/outsourcing/debtor_list.php:14 app/views/outsourcing/index.php:53
+msgid "Debtors closed"
+msgstr "Debiteuren gesloten"
+
+#: app/views/collection/debtor_list.php:26
+#: app/views/collection/debtor_list.php:59
+#: app/views/outsourcing/debtor_list.php:26
+#: app/views/outsourcing/debtor_list.php:60
+msgid "Debtor nr."
+msgstr "Debiteurnummer"
+
+#: app/views/collection/debtor_list.php:27
+#: app/views/collection/debtor_list.php:60
+#: app/views/outsourcing/debtor_list.php:27
+#: app/views/outsourcing/debtor_list.php:61
+msgid "Invoice Amt."
+msgstr "Fact. bedrag"
+
+#: app/views/collection/debtor_list.php:28
+#: app/views/collection/debtor_list.php:61
+#: app/views/outsourcing/debtor_list.php:28
+#: app/views/outsourcing/debtor_list.php:62
+msgid "Outstanding"
+msgstr "Openstaand"
+
+#: app/views/collection/footer.php:12 app/views/outsourcing/footer.php:12
+msgid "Any questions? Feel free to send us an e-mail at"
+msgstr ""
+"Indien u verder nog vragen heeft of hulp nodig hebt, stuurt u ons dan een e-"
+"mail op"
+
+#: app/views/collection/graph.php:3 app/views/outsourcing/graph.php:2
+msgid "Overview outstanding invoices"
+msgstr "Overzicht debiteur"
+
+#: app/views/collection/graph.php:11
+msgid "Invoice(s)"
+msgstr "Hoofdsom"
+
+#: app/views/collection/graph.php:17
+msgid "Paid before submission"
+msgstr "Betaald voor indiening"
+
+#: app/views/collection/graph.php:29
+msgid "Collection Charges"
+msgstr "Incassokosten"
+
+#: app/views/collection/graph.php:41 app/views/collection/graph.php:66
+#: app/views/outsourcing/graph.php:14
+msgid "Paid"
+msgstr "Betaald"
+
+#: app/views/collection/graph.php:47
+msgid "Total Outstanding"
+msgstr "Totaal openstaand"
+
+#: app/views/collection/index.php:11 app/views/collection/index.php:25
+#: app/views/outsourcing/index.php:11 app/views/outsourcing/index.php:25
+msgid "Pick a debtor"
+msgstr "Kies uw debiteur"
+
+#: app/views/collection/index.php:18 app/views/outsourcing/index.php:18
+msgid "Step by step instructions"
+msgstr "Stap voor stap instructies"
+
+#: app/views/collection/index.php:24 app/views/outsourcing/index.php:24
+msgid ""
+"Choose a debtor from the list on the left side of your of the screen by "
+"clicking on the following button"
+msgstr ""
+"Kies een debiteur uit de lijst aan de linkerkant van uw scherm door op de "
+"onderstaande knop te klikken"
+
+#: app/views/collection/index.php:27 app/views/outsourcing/index.php:27
+msgid ""
+"You can also use the search bar on the top right of the screen to search for "
+"a debtor by name, number, invoice number, invoice amount, postal code, or "
+"location."
+msgstr ""
+"U kunt ook de zoekfunctie aan de rechter bovenkant van uw scherm gebruiken "
+"om te zoeken op naam, nummer, factuurnummer, factuurbedrag, postcode of "
+"locatie."
+
+#: app/views/collection/index.php:35 app/views/outsourcing/index.php:35
+msgid ""
+"After clicking on the debtor of your choice, all of the debtor's data will "
+"load."
+msgstr ""
+"Na het klikken op uw debiteur naar keuze, zal alle data van de "
+"desbetreffende debiteur laden."
+
+#: app/views/collection/index.php:36 app/views/outsourcing/index.php:36
+msgid ""
+"You may close or expand any of the sections where the given data is grouped. "
+"You can also download lists of open and/or closed invoices including the "
+"notes."
+msgstr ""
+"U kunt elk kader waar data in wordt gegeven openen of sluiten. U kunt tevens "
+"de lijsten met openstaande en/of gesloten facturen downloaden inclusief "
+"notities."
+
+#: app/views/collection/index.php:44 app/views/outsourcing/index.php:44
+msgid ""
+"If you want to load another debtor, click on the button again and choose the "
+"debtor of your choice."
+msgstr ""
+"Indien u een andere debiteur wilt laden, klikt u nogmaals op de knop en "
+"kiest u de door u gewenste debiteur."
+
+#: app/views/collection/index.php:52 app/views/outsourcing/index.php:52
+msgid "If you wish to see a list of paid debtors, click on the button below."
+msgstr ""
+"Indien u de lijst met debiteuren welke betaald hebben wilt zien, klikt u op "
+"de onderstaande knop."
+
+#: app/views/collection/index.php:61 app/views/outsourcing/index.php:61
+msgid "If you have any further questions or need help, please send an email at"
+msgstr ""
+"Indien u verder nog vragen heeft of hulp nodig hebt, stuurt u ons dan een e-"
+"mail op"
+
+#: app/views/collection/index.php:73 app/views/outsourcing/index.php:73
+msgid "Company information"
+msgstr "Bedrijfsgegevens"
+
+#: app/views/collection/index.php:83 app/views/outsourcing/index.php:83
+msgid "Debtor details"
+msgstr "Debiteurgegevens"
+
+#: app/views/collection/index.php:93
+msgid "Main overview"
+msgstr "Overzicht vordering"
+
+#: app/views/collection/index.php:101 app/views/outsourcing/index.php:101
+msgid "Closed invoices"
+msgstr "Gesloten facturen"
+
+#: app/views/collection/invoice_closed_info.php:1
+#: app/views/collection/invoice_info.php:1
+#: app/views/outsourcing/invoice_closed_info.php:1
+#: app/views/outsourcing/invoice_info.php:1
+msgid "Excel"
+msgstr "Excel"
+
+#: app/views/collection/invoice_closed_info.php:2
+#: app/views/collection/invoice_info.php:2
+#: app/views/outsourcing/invoice_closed_info.php:2
+#: app/views/outsourcing/invoice_info.php:2
+msgid "Click on an invoice to see its notes"
+msgstr "Klik op een factuur om de factuurnotities te zien"
+
+#: app/views/collection/invoice_closed_info.php:6
+#: app/views/collection/invoice_info.php:6
+#: app/views/outsourcing/invoice_closed_info.php:6
+#: app/views/outsourcing/invoice_info.php:6
+msgid "Invoice nr."
+msgstr "Factuurnr."
+
+#: app/views/collection/invoice_closed_info.php:11
+#: app/views/collection/invoice_info.php:10
+#: app/views/outsourcing/invoice_closed_info.php:11
+#: app/views/outsourcing/invoice_info.php:10
+msgid "Invoice amt."
+msgstr "Fact. bedrag"
+
+#: app/views/collection/invoice_closed_info.php:45
+#: app/views/collection/invoice_info.php:51
+#: app/views/outsourcing/invoice_closed_info.php:45
+#: app/views/outsourcing/invoice_info.php:50
+msgid "There are no notes for this invoice"
+msgstr "Er zijn geen notities voor deze factuur"
+
+#: app/views/collection/invoice_info.php:9
+#: app/views/outsourcing/invoice_closed_info.php:10
+#: app/views/outsourcing/invoice_info.php:9
+msgid "Exp."
+msgstr "Verv."
+
+#: app/views/collection/invoice_info.php:11
+msgid "Total open (incl. I&C)"
+msgstr "Totaal open (incl. R&I)"
+
+#: app/views/collection/login.php:14
+msgid "Log in to your collection panel"
+msgstr "Log in op uw incasso omgeving"
+
+#: app/views/outsourcing/admin_info.php:33
+msgid "Account"
+msgstr "Account"
+
+#: app/views/outsourcing/index.php:93
+msgid "Open Invoices"
+msgstr "Openstaande facturen"
+
+#: app/views/outsourcing/invoice_closed_info.php:9
+msgid "Pay Date"
+msgstr "Betaaldatum"
+
+#: app/views/outsourcing/invoice_info.php:11
+msgid "Open amt."
+msgstr "Bedrag open"
+
+#: app/views/outsourcing/invoice_info.php:12
+msgid "Adm. costs"
+msgstr "Adm. kosten"
+
+#: app/views/outsourcing/invoice_info.php:13
+msgid "Paid amt."
+msgstr "Bedrag betaald"
+
+#: app/views/outsourcing/login.php:14
+msgid "Log in to your personal panel"
+msgstr "Log in op uw outsourcing omgeving"
+
+#~ msgid "Debtor #"
+#~ msgstr "Debiteurnr."
+
+#~ msgid "Phone"
+#~ msgstr "Telefoonnummer"
+
+#~ msgid "Paid Debtors"
+#~ msgstr "Debiteuren gesloten"
+
+#~ msgid "Need help? Send us an e-mail to"
+#~ msgstr "Heeft u vragen? Stuur een e-mail naar"
+
+#~ msgid "Paid Collection Agency"
+#~ msgstr "Betaald voor indiening"
+
+#~ msgid "Already Paid"
+#~ msgstr "Betaald"
+
+#~ msgid "Paid debtors"
+#~ msgstr "Debiteuren betaald"
+
+#~ msgid "Download"
+#~ msgstr "Excel"
+
+#~ msgid "Total Open"
+#~ msgstr "Totaal open (incl. R&I)"
+
+#~ msgid "Need hep? Send us an email to"
+#~ msgstr "Hulp nodig? Stuur een e-mail naar"
+
+#~ msgid "Debtor:"
+#~ msgstr "Debiteur:"
